@@ -62,6 +62,7 @@ export default defineConfig({
     mocha: {
       timeout: 20 * 60 * 1000, // 20 minutes
       rootHooks: mochaRootHooks,
+      parallel: process.env.PARALLEL === "true",
     },
   },
   paths: {
