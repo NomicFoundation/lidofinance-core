@@ -12,8 +12,12 @@ python = "^3.12.1"
 setuptools = "^78.1.1"
 
 [tool.poetry.group.dev.dependencies]
-slither-analyzer = "^0.10.4"
-slitherin = "^0.7.2"
+# Slither is pinned to an upstream commit because no released slither-analyzer (<=0.11.5)
+# yet allows crytic-compile >=0.4.0, and only crytic-compile 0.4.x can parse Hardhat 3
+# build-info. Switch back to a released slither-analyzer once one ships that support.
+# slitherin is intentionally not included: its latest release (0.7.2, 2024) is incompatible
+# with this Slither's API and the project is unmaintained.
+slither-analyzer = { git = "https://github.com/crytic/slither.git", rev = "5e78b88c0235885aa0a3f0ac3124d5eace3f1c40" }
 
 [build-system]
 requires = ["poetry-core"]
