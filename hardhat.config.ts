@@ -1,5 +1,6 @@
 import "dotenv/config";
 import { configVariable, defineConfig } from "hardhat/config";
+import HardhatIgnoreWarnings from "hardhat-ignore-warnings";
 
 import HardhatToolbox from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
 import HardhatContractSizer from "@solidstate/hardhat-contract-sizer";
@@ -20,7 +21,7 @@ export const ZERO_PK = "0x000000000000000000000000000000000000000000000000000000
 const LOCAL_DEVNET_CHAIN_ID = parseInt(process.env.LOCAL_DEVNET_CHAIN_ID ?? "32382", 10);
 
 export default defineConfig({
-  plugins: [HardhatToolbox, HardhatContractSizer],
+  plugins: [HardhatToolbox, HardhatContractSizer, HardhatIgnoreWarnings],
   tasks: [
     checkInterfacesTask,
     compileOverrideTask,
@@ -171,6 +172,12 @@ export default defineConfig({
         },
       },
     },
+  },
+  warnings: {
+    "@aragon/**/*": { default: "off" },
+    "contracts/*/mocks/**/*": { default: "off" },
+    "test/*/contracts/**/*": { default: "off" },
+    "contracts/common/interfaces/ILidoLocator.sol": { default: "off" },
   },
   networks: {
     "default": {
