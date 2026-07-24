@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage
   SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-04.dtd'>
-<coverage branch-rate="0.0" branches-covered="0" branches-valid="0" complexity="0" line-rate="0.9519334463102758" lines-covered="6179" lines-valid="6491" timestamp="1784629533" version="2.0.3">
+<coverage branch-rate="0.0" branches-covered="0" branches-valid="0" complexity="0" line-rate="0.9057810864254973" lines-covered="7787" lines-valid="8597" timestamp="1784885256" version="2.0.3">
 	<sources>
 		<source>.</source>
 	</sources>
@@ -204,6 +204,1053 @@
 						<line branch="false" hits="1" number="170"/>
 						<line branch="false" hits="1" number="171"/>
 						<line branch="false" hits="1" number="177"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.8423236514522822" branch-rate="0.0" name="test.0.8.9.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ERC721Receiver__Mock.sol" line-rate="0.8" name="test.0.8.9.contracts.ERC721Receiver__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="0" number="37"/>
+						<line branch="false" hits="0" number="38"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Burner__MockForMigration.sol" line-rate="1.0" name="test.0.8.9.contracts.Burner__MockForMigration.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Burner__MockForSanityChecker.sol" line-rate="1.0" name="test.0.8.9.contracts.Burner__MockForSanityChecker.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="17"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Counters__Mock.sol" line-rate="0.3333333333333333" name="test.0.8.9.contracts.Counters__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="12"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="0" number="20"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/DepositContract__MockForBeaconChainDepositor.sol" line-rate="1.0" name="test.0.8.9.contracts.DepositContract__MockForBeaconChainDepositor.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/DepositContract__MockForDepositSecurityModule.sol" line-rate="1.0" name="test.0.8.9.contracts.DepositContract__MockForDepositSecurityModule.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/EIP7002WithdrawalRequest__Mock.sol" line-rate="0.9333333333333333" name="test.0.8.9.contracts.EIP7002WithdrawalRequest__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="1" number="53"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Initializable__Mock.sol" line-rate="1.0" name="test.0.8.9.contracts.Initializable__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="25"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/LazyOracle__MockForAccountingOracle.sol" line-rate="1.0" name="test.0.8.9.contracts.LazyOracle__MockForAccountingOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="20"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Lido__MockForAccounting.sol" line-rate="1.0" name="test.0.8.9.contracts.Lido__MockForAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="109"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="1" number="115"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="120"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Lido__MockForDepositSecurityModule.sol" line-rate="1.0" name="test.0.8.9.contracts.Lido__MockForDepositSecurityModule.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Lido__MockForElRewardsVault.sol" line-rate="1.0" name="test.0.8.9.contracts.Lido__MockForElRewardsVault.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Lido__MockForWithdrawalVault.sol" line-rate="1.0" name="test.0.8.9.contracts.Lido__MockForWithdrawalVault.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/OracleReportSanityChecker__MockForAccounting.sol" line-rate="0.8571428571428571" name="test.0.8.9.contracts.OracleReportSanityChecker__MockForAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="0" number="67"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="0" number="81"/>
+						<line branch="false" hits="1" number="90"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="1" number="92"/>
+						<line branch="false" hits="1" number="93"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Receiver__MockForWithdrawalQueueBase.sol" line-rate="1.0" name="test.0.8.9.contracts.Receiver__MockForWithdrawalQueueBase.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Recipient__MockForAddress.sol" line-rate="1.0" name="test.0.8.9.contracts.Recipient__MockForAddress.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="38"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/RefundReverter.sol" line-rate="1.0" name="test.0.8.9.contracts.RefundReverter.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="6"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/SecondOpinionOracle__Mock.sol" line-rate="0.5294117647058824" name="test.0.8.9.contracts.SecondOpinionOracle__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="0" number="37"/>
+						<line branch="false" hits="0" number="38"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="0" number="43"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingRouter_MockForTWG.sol" line-rate="1.0" name="test.0.8.9.contracts.StakingRouter_MockForTWG.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/TriggerableWithdrawalsGateway__MockForVEB.sol" line-rate="1.0" name="test.0.8.9.contracts.TriggerableWithdrawalsGateway__MockForVEB.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="18"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalValut_MockForTWG.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalValut_MockForTWG.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="7"/>
+						<line branch="false" hits="1" number="11"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalsManagerProxy__Mock.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalsManagerProxy__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="8"/>
+						<line branch="false" hits="1" number="9"/>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="16"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalsVault__MockForWithdrawalManagerProxy.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalsVault__MockForWithdrawalManagerProxy.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="8"/>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="false" hits="1" number="12"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ERC20__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.ERC20__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ERC721__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.ERC721__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/LidoLocator__MockForSanityChecker.sol" line-rate="0.6875" name="test.0.8.9.contracts.LidoLocator__MockForSanityChecker.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="0" number="84"/>
+						<line branch="false" hits="0" number="92"/>
+						<line branch="false" hits="0" number="93"/>
+						<line branch="false" hits="0" number="94"/>
+						<line branch="false" hits="0" number="95"/>
+						<line branch="false" hits="0" number="96"/>
+						<line branch="false" hits="0" number="97"/>
+						<line branch="false" hits="0" number="98"/>
+						<line branch="false" hits="0" number="99"/>
+						<line branch="false" hits="0" number="100"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/LidoLocator__MockMutable.sol" line-rate="0.9166666666666666" name="test.0.8.9.contracts.LidoLocator__MockMutable.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="81"/>
+						<line branch="false" hits="0" number="85"/>
+						<line branch="false" hits="1" number="93"/>
+						<line branch="false" hits="1" number="94"/>
+						<line branch="false" hits="1" number="95"/>
+						<line branch="false" hits="1" number="96"/>
+						<line branch="false" hits="1" number="97"/>
+						<line branch="false" hits="1" number="98"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="101"/>
+						<line branch="false" hits="0" number="105"/>
+						<line branch="false" hits="1" number="106"/>
+						<line branch="false" hits="1" number="110"/>
+						<line branch="false" hits="0" number="114"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StETH__HarnessForWithdrawalQueue.sol" line-rate="1.0" name="test.0.8.9.contracts.StETH__HarnessForWithdrawalQueue.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="86"/>
+						<line branch="false" hits="1" number="102"/>
+						<line branch="false" hits="1" number="103"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="115"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="1" number="123"/>
+						<line branch="false" hits="1" number="127"/>
+						<line branch="false" hits="1" number="134"/>
+						<line branch="false" hits="1" number="135"/>
+						<line branch="false" hits="1" number="137"/>
+						<line branch="false" hits="1" number="138"/>
+						<line branch="false" hits="1" number="143"/>
+						<line branch="false" hits="1" number="148"/>
+						<line branch="false" hits="1" number="149"/>
+						<line branch="false" hits="1" number="150"/>
+						<line branch="false" hits="1" number="155"/>
+						<line branch="false" hits="1" number="156"/>
+						<line branch="false" hits="1" number="157"/>
+						<line branch="false" hits="1" number="160"/>
+						<line branch="false" hits="1" number="161"/>
+						<line branch="false" hits="1" number="163"/>
+						<line branch="false" hits="1" number="164"/>
+						<line branch="false" hits="1" number="169"/>
+						<line branch="false" hits="1" number="170"/>
+						<line branch="false" hits="1" number="171"/>
+						<line branch="false" hits="1" number="172"/>
+						<line branch="false" hits="1" number="178"/>
+						<line branch="false" hits="1" number="179"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingModule__MockForStakingRouter.sol" line-rate="0.9120879120879121" name="test.0.8.9.contracts.StakingModule__MockForStakingRouter.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="81"/>
+						<line branch="false" hits="1" number="82"/>
+						<line branch="false" hits="1" number="83"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="86"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="88"/>
+						<line branch="false" hits="1" number="101"/>
+						<line branch="false" hits="1" number="102"/>
+						<line branch="false" hits="1" number="103"/>
+						<line branch="false" hits="1" number="104"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="106"/>
+						<line branch="false" hits="1" number="107"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="118"/>
+						<line branch="false" hits="1" number="121"/>
+						<line branch="false" hits="1" number="122"/>
+						<line branch="false" hits="1" number="125"/>
+						<line branch="false" hits="1" number="129"/>
+						<line branch="false" hits="1" number="133"/>
+						<line branch="false" hits="1" number="134"/>
+						<line branch="false" hits="1" number="138"/>
+						<line branch="false" hits="1" number="141"/>
+						<line branch="false" hits="1" number="144"/>
+						<line branch="false" hits="1" number="148"/>
+						<line branch="false" hits="1" number="151"/>
+						<line branch="false" hits="1" number="152"/>
+						<line branch="false" hits="1" number="155"/>
+						<line branch="false" hits="1" number="157"/>
+						<line branch="false" hits="1" number="158"/>
+						<line branch="false" hits="1" number="161"/>
+						<line branch="false" hits="1" number="165"/>
+						<line branch="false" hits="1" number="166"/>
+						<line branch="false" hits="1" number="169"/>
+						<line branch="false" hits="1" number="175"/>
+						<line branch="false" hits="1" number="178"/>
+						<line branch="false" hits="0" number="184"/>
+						<line branch="false" hits="1" number="191"/>
+						<line branch="false" hits="1" number="199"/>
+						<line branch="false" hits="1" number="202"/>
+						<line branch="false" hits="1" number="205"/>
+						<line branch="false" hits="1" number="212"/>
+						<line branch="false" hits="1" number="213"/>
+						<line branch="false" hits="1" number="216"/>
+						<line branch="false" hits="1" number="218"/>
+						<line branch="false" hits="1" number="219"/>
+						<line branch="false" hits="1" number="222"/>
+						<line branch="false" hits="1" number="224"/>
+						<line branch="false" hits="1" number="225"/>
+						<line branch="false" hits="1" number="228"/>
+						<line branch="false" hits="1" number="232"/>
+						<line branch="false" hits="1" number="233"/>
+						<line branch="false" hits="1" number="236"/>
+						<line branch="false" hits="1" number="238"/>
+						<line branch="false" hits="1" number="239"/>
+						<line branch="false" hits="1" number="242"/>
+						<line branch="false" hits="1" number="244"/>
+						<line branch="false" hits="1" number="245"/>
+						<line branch="false" hits="1" number="248"/>
+						<line branch="false" hits="1" number="252"/>
+						<line branch="false" hits="1" number="253"/>
+						<line branch="false" hits="1" number="256"/>
+						<line branch="false" hits="0" number="264"/>
+						<line branch="false" hits="0" number="273"/>
+						<line branch="false" hits="0" number="282"/>
+						<line branch="false" hits="0" number="286"/>
+						<line branch="false" hits="1" number="289"/>
+						<line branch="false" hits="0" number="292"/>
+						<line branch="false" hits="0" number="296"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingModule__MockForTriggerableWithdrawals.sol" line-rate="0.3103448275862069" name="test.0.8.9.contracts.StakingModule__MockForTriggerableWithdrawals.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="0" number="34"/>
+						<line branch="false" hits="0" number="43"/>
+						<line branch="false" hits="0" number="51"/>
+						<line branch="false" hits="0" number="52"/>
+						<line branch="false" hits="0" number="53"/>
+						<line branch="false" hits="0" number="57"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="65"/>
+						<line branch="false" hits="0" number="74"/>
+						<line branch="false" hits="0" number="94"/>
+						<line branch="false" hits="0" number="98"/>
+						<line branch="false" hits="0" number="102"/>
+						<line branch="false" hits="0" number="106"/>
+						<line branch="false" hits="0" number="110"/>
+						<line branch="false" hits="0" number="114"/>
+						<line branch="false" hits="0" number="118"/>
+						<line branch="false" hits="0" number="122"/>
+						<line branch="false" hits="0" number="126"/>
+						<line branch="false" hits="0" number="130"/>
+						<line branch="false" hits="1" number="135"/>
+						<line branch="false" hits="1" number="139"/>
+						<line branch="false" hits="1" number="140"/>
+						<line branch="false" hits="1" number="141"/>
+						<line branch="false" hits="1" number="142"/>
+						<line branch="false" hits="1" number="145"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Address__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.Address__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="67"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ERC1967Proxy__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.ERC1967Proxy__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Math__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.Math__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="22"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Proxy__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.Proxy__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/AccessControl__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.AccessControl__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="20"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/MinFirstAllocationStrategy__HarnessModern.sol" line-rate="0.0" name="test.0.8.9.contracts.MinFirstAllocationStrategy__HarnessModern.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="14"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="0" number="23"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalsQueueBase__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalsQueueBase__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="81"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="89"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ExitLimitUtils__Harness.sol" line-rate="0.6363636363636364" name="test.0.8.9.contracts.ExitLimitUtils__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="0" number="43"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="45"/>
+						<line branch="false" hits="0" number="46"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="0" number="48"/>
+						<line branch="false" hits="0" number="49"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="73"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/PausableUntil__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.PausableUntil__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="26"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/PositiveTokenRebaseLimiter__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.PositiveTokenRebaseLimiter__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="48"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Versioned__Harness089.sol" line-rate="1.0" name="test.0.8.9.contracts.Versioned__Harness089.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="28"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/AccessControlEnumerable__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.AccessControlEnumerable__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WstETH__HarnessForWithdrawalQueueDeploy.sol" line-rate="0.0" name="test.0.8.9.contracts.WstETH__HarnessForWithdrawalQueueDeploy.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="13"/>
+						<line branch="false" hits="0" number="17"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="0" number="20"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WstETH__MockForWithdrawalQueue.sol" line-rate="1.0" name="test.0.8.9.contracts.WstETH__MockForWithdrawalQueue.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="94"/>
+						<line branch="false" hits="1" number="96"/>
+						<line branch="false" hits="1" number="98"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="106"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="109"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="115"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="120"/>
+						<line branch="false" hits="1" number="121"/>
+						<line branch="false" hits="1" number="122"/>
+						<line branch="false" hits="1" number="127"/>
+						<line branch="false" hits="1" number="128"/>
+						<line branch="false" hits="1" number="130"/>
+						<line branch="false" hits="1" number="131"/>
+						<line branch="false" hits="1" number="132"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalVault__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalVault__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="16"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/HashConsensus__Harness.sol" line-rate="0.8571428571428571" name="test.0.8.9.contracts.HashConsensus__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="0" number="72"/>
+						<line branch="false" hits="1" number="76"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ReportProcessor__Mock.sol" line-rate="0.9285714285714286" name="test.0.8.9.contracts.ReportProcessor__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="0" number="32"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="72"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/TriggerableWithdrawalsGateway__Harness.sol" line-rate="0.8" name="test.0.8.9.contracts.TriggerableWithdrawalsGateway__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/BaseOracle__Harness.sol" line-rate="0.9047619047619048" name="test.0.8.9.contracts.BaseOracle__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="0" number="52"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="88"/>
+						<line branch="false" hits="1" number="92"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ConsensusContract__Mock.sol" line-rate="0.8181818181818182" name="test.0.8.9.contracts.ConsensusContract__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="0" number="70"/>
+						<line branch="false" hits="0" number="71"/>
+						<line branch="false" hits="0" number="72"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="0" number="92"/>
+						<line branch="false" hits="1" number="96"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="116"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalsQueue__Harness.sol" line-rate="0.6" name="test.0.8.9.contracts.WithdrawalsQueue__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="0" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="35"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingRouter__Harness.sol" line-rate="0.6" name="test.0.8.9.contracts.StakingRouter__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="15"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingRouter__MockForSanityChecker.sol" line-rate="1.0" name="test.0.8.9.contracts.StakingRouter__MockForSanityChecker.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="52"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/NFTDescriptor__MockForWithdrawalQueue.sol" line-rate="0.8571428571428571" name="test.0.8.9.contracts.NFTDescriptor__MockForWithdrawalQueue.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="0" number="24"/>
+						<line branch="false" hits="0" number="28"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="45"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/AccountingOracle__Harness.sol" line-rate="1.0" name="test.0.8.9.contracts.AccountingOracle__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="39"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/AccountingOracle__MockForSanityChecker.sol" line-rate="0.23809523809523808" name="test.0.8.9.contracts.AccountingOracle__MockForSanityChecker.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="0" number="32"/>
+						<line branch="false" hits="0" number="33"/>
+						<line branch="false" hits="0" number="35"/>
+						<line branch="false" hits="0" number="36"/>
+						<line branch="false" hits="0" number="37"/>
+						<line branch="false" hits="0" number="38"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="0" number="43"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="45"/>
+						<line branch="false" hits="0" number="46"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="55"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Accounting__MockForAccountingOracle.sol" line-rate="1.0" name="test.0.8.9.contracts.Accounting__MockForAccountingOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="18"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/Accounting__MockForSanityChecker.sol" line-rate="0.0" name="test.0.8.9.contracts.Accounting__MockForSanityChecker.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="18"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingRouter__MockForAccountingOracle.sol" line-rate="1.0" name="test.0.8.9.contracts.StakingRouter__MockForAccountingOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="71"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalQueue__MockForAccountingOracle.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalQueue__MockForAccountingOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="22"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/ValidatorsExitBus__Harness.sol" line-rate="0.8333333333333334" name="test.0.8.9.contracts.ValidatorsExitBus__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="0" number="54"/>
+						<line branch="false" hits="0" number="55"/>
+						<line branch="false" hits="1" number="59"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/StakingRouter__MockForDepositSecurityModule.sol" line-rate="0.7272727272727273" name="test.0.8.9.contracts.StakingRouter__MockForDepositSecurityModule.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="0" number="59"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="0" number="73"/>
+						<line branch="false" hits="0" number="79"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="1" number="97"/>
+						<line branch="false" hits="1" number="101"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="1" number="115"/>
+						<line branch="false" hits="1" number="121"/>
+						<line branch="false" hits="1" number="125"/>
+						<line branch="false" hits="1" number="128"/>
+						<line branch="false" hits="0" number="129"/>
+						<line branch="false" hits="1" number="130"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/OracleReportSanityCheckerWrapper.sol" line-rate="0.6" name="test.0.8.9.contracts.OracleReportSanityCheckerWrapper.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="44"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/contracts/WithdrawalQueue__MockForSanityChecker.sol" line-rate="1.0" name="test.0.8.9.contracts.WithdrawalQueue__MockForSanityChecker.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
 					</lines>
 				</class>
 			</classes>
@@ -2755,6 +3802,1291 @@
 				</class>
 			</classes>
 		</package>
+		<package line-rate="0.9085714285714286" branch-rate="0.0" name="test.0.4.24.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Burner__MockForAccounting.sol" line-rate="1.0" name="test.0.4.24.contracts.Burner__MockForAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="25"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Burner__MockForDistributeReward.sol" line-rate="0.0" name="test.0.4.24.contracts.Burner__MockForDistributeReward.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="0" number="23"/>
+						<line branch="false" hits="0" number="25"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/LidoExecutionLayerRewardsVault__MockForLidoAccounting.sol" line-rate="1.0" name="test.0.4.24.contracts.LidoExecutionLayerRewardsVault__MockForLidoAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="18"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/PostTokenRebaseReceiver__MockForAccounting.sol" line-rate="1.0" name="test.0.4.24.contracts.PostTokenRebaseReceiver__MockForAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="8"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StakingRouter__MockForLidoAccounting.sol" line-rate="1.0" name="test.0.4.24.contracts.StakingRouter__MockForLidoAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="48"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StakingRouter__MockForLidoMisc.sol" line-rate="1.0" name="test.0.4.24.contracts.StakingRouter__MockForLidoMisc.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="48"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StakingRouter__MockForLidoUpgrade.sol" line-rate="0.9859154929577465" name="test.0.4.24.contracts.StakingRouter__MockForLidoUpgrade.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="81"/>
+						<line branch="false" hits="1" number="82"/>
+						<line branch="false" hits="1" number="83"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="86"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="88"/>
+						<line branch="false" hits="1" number="89"/>
+						<line branch="false" hits="1" number="90"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="1" number="92"/>
+						<line branch="false" hits="1" number="93"/>
+						<line branch="false" hits="1" number="95"/>
+						<line branch="false" hits="1" number="96"/>
+						<line branch="false" hits="1" number="97"/>
+						<line branch="false" hits="1" number="98"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="101"/>
+						<line branch="false" hits="1" number="102"/>
+						<line branch="false" hits="1" number="103"/>
+						<line branch="false" hits="1" number="104"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="106"/>
+						<line branch="false" hits="1" number="107"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="109"/>
+						<line branch="false" hits="1" number="110"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="0" number="113"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/WithdrawalQueue__MockForAccounting.sol" line-rate="1.0" name="test.0.4.24.contracts.WithdrawalQueue__MockForAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="54"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/WithdrawalQueue__MockForLidoMisc.sol" line-rate="1.0" name="test.0.4.24.contracts.WithdrawalQueue__MockForLidoMisc.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="false" hits="1" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/WithdrawalVault__MockForLidoAccounting.sol" line-rate="1.0" name="test.0.4.24.contracts.WithdrawalVault__MockForLidoAccounting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="14"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Packed64x4__Harness.sol" line-rate="1.0" name="test.0.4.24.contracts.Packed64x4__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Pausable__Harness.sol" line-rate="1.0" name="test.0.4.24.contracts.Pausable__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StakeLimitUtils__Harness.sol" line-rate="1.0" name="test.0.4.24.contracts.StakeLimitUtils__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="86"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="88"/>
+						<line branch="false" hits="1" number="89"/>
+						<line branch="false" hits="1" number="90"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="1" number="93"/>
+						<line branch="false" hits="1" number="95"/>
+						<line branch="false" hits="1" number="96"/>
+						<line branch="false" hits="1" number="97"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="104"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="107"/>
+						<line branch="false" hits="1" number="109"/>
+						<line branch="false" hits="1" number="110"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="113"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="116"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="1" number="118"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="127"/>
+						<line branch="false" hits="1" number="128"/>
+						<line branch="false" hits="1" number="129"/>
+						<line branch="false" hits="1" number="130"/>
+						<line branch="false" hits="1" number="132"/>
+						<line branch="false" hits="1" number="145"/>
+						<line branch="false" hits="1" number="146"/>
+						<line branch="false" hits="1" number="147"/>
+						<line branch="false" hits="1" number="148"/>
+						<line branch="false" hits="1" number="152"/>
+						<line branch="false" hits="1" number="156"/>
+						<line branch="false" hits="1" number="160"/>
+						<line branch="false" hits="1" number="162"/>
+						<line branch="false" hits="1" number="166"/>
+						<line branch="false" hits="1" number="168"/>
+						<line branch="false" hits="1" number="172"/>
+						<line branch="false" hits="1" number="174"/>
+						<line branch="false" hits="1" number="178"/>
+						<line branch="false" hits="1" number="180"/>
+						<line branch="false" hits="1" number="184"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Versioned__Harness0424.sol" line-rate="1.0" name="test.0.4.24.contracts.Versioned__Harness0424.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/SigningKeys__Harness.sol" line-rate="1.0" name="test.0.4.24.contracts.SigningKeys__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="59"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/MinFirstAllocationStrategy__HarnessLegacyVersion.sol" line-rate="0.0" name="test.0.4.24.contracts.MinFirstAllocationStrategy__HarnessLegacyVersion.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="14"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="0" number="23"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StETH__Harness.sol" line-rate="1.0" name="test.0.4.24.contracts.StETH__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="37"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StETH__HarnessForWithdrawalQueueDeploy.sol" line-rate="0.6666666666666666" name="test.0.4.24.contracts.StETH__HarnessForWithdrawalQueueDeploy.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="0" number="27"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="0" number="50"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/NodeOperatorsRegistry__Harness.sol" line-rate="0.9154929577464789" name="test.0.4.24.contracts.NodeOperatorsRegistry__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="82"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="86"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="88"/>
+						<line branch="false" hits="1" number="89"/>
+						<line branch="false" hits="1" number="93"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="1" number="101"/>
+						<line branch="false" hits="1" number="102"/>
+						<line branch="false" hits="1" number="104"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="113"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="115"/>
+						<line branch="false" hits="1" number="116"/>
+						<line branch="false" hits="1" number="118"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="121"/>
+						<line branch="false" hits="1" number="135"/>
+						<line branch="false" hits="1" number="138"/>
+						<line branch="false" hits="1" number="141"/>
+						<line branch="false" hits="1" number="145"/>
+						<line branch="false" hits="1" number="153"/>
+						<line branch="false" hits="0" number="157"/>
+						<line branch="false" hits="0" number="158"/>
+						<line branch="false" hits="0" number="162"/>
+						<line branch="false" hits="0" number="164"/>
+						<line branch="false" hits="0" number="165"/>
+						<line branch="false" hits="1" number="169"/>
+						<line branch="false" hits="1" number="173"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StETHPermit__HarnessForWithdrawalQueueDeploy.sol" line-rate="0.5" name="test.0.4.24.contracts.StETHPermit__HarnessForWithdrawalQueueDeploy.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="false" hits="0" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/StETHPermit__HarnessWithEip712Initialization.sol" line-rate="1.0" name="test.0.4.24.contracts.StETHPermit__HarnessWithEip712Initialization.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="13"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Lido__HarnessForDistributeReward.sol" line-rate="0.29411764705882354" name="test.0.4.24.contracts.Lido__HarnessForDistributeReward.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="0" number="26"/>
+						<line branch="false" hits="0" number="27"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="0" number="35"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="43"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="0" number="51"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="0" number="60"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="62"/>
+						<line branch="false" hits="0" number="63"/>
+						<line branch="false" hits="0" number="67"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.4.24/contracts/Lido__HarnessForFinalizeUpgradeV3.sol" line-rate="1.0" name="test.0.4.24.contracts.Lido__HarnessForFinalizeUpgradeV3.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.3732394366197183" branch-rate="0.0" name="test.0.8.25.vaults.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/DelegateCaller.sol" line-rate="0.0" name="test.0.8.25.vaults.contracts.DelegateCaller.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="8"/>
+						<line branch="false" hits="0" number="9"/>
+						<line branch="false" hits="0" number="10"/>
+						<line branch="false" hits="0" number="11"/>
+						<line branch="false" hits="0" number="14"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/EIP7251MaxEffectiveBalanceRequest__Mock.sol" line-rate="0.5333333333333333" name="test.0.8.25.vaults.contracts.EIP7251MaxEffectiveBalanceRequest__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="45"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="0" number="48"/>
+						<line branch="false" hits="0" number="49"/>
+						<line branch="false" hits="0" number="52"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/Mimic.sol" line-rate="0.0196078431372549" name="test.0.8.25.vaults.contracts.Mimic.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="25"/>
+						<line branch="false" hits="0" number="26"/>
+						<line branch="false" hits="0" number="27"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="0" number="33"/>
+						<line branch="false" hits="0" number="37"/>
+						<line branch="false" hits="0" number="38"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="46"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="0" number="48"/>
+						<line branch="false" hits="0" number="49"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="0" number="54"/>
+						<line branch="false" hits="0" number="55"/>
+						<line branch="false" hits="0" number="59"/>
+						<line branch="false" hits="0" number="60"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="62"/>
+						<line branch="false" hits="0" number="63"/>
+						<line branch="false" hits="0" number="67"/>
+						<line branch="false" hits="0" number="68"/>
+						<line branch="false" hits="0" number="72"/>
+						<line branch="false" hits="0" number="73"/>
+						<line branch="false" hits="0" number="77"/>
+						<line branch="false" hits="0" number="78"/>
+						<line branch="false" hits="0" number="79"/>
+						<line branch="false" hits="0" number="83"/>
+						<line branch="false" hits="0" number="84"/>
+						<line branch="false" hits="0" number="85"/>
+						<line branch="false" hits="0" number="89"/>
+						<line branch="false" hits="0" number="90"/>
+						<line branch="false" hits="0" number="91"/>
+						<line branch="false" hits="0" number="92"/>
+						<line branch="false" hits="0" number="93"/>
+						<line branch="false" hits="0" number="94"/>
+						<line branch="false" hits="0" number="96"/>
+						<line branch="false" hits="0" number="98"/>
+						<line branch="false" hits="0" number="99"/>
+						<line branch="false" hits="0" number="100"/>
+						<line branch="false" hits="0" number="101"/>
+						<line branch="false" hits="0" number="102"/>
+						<line branch="false" hits="0" number="103"/>
+						<line branch="false" hits="0" number="105"/>
+						<line branch="false" hits="0" number="107"/>
+						<line branch="false" hits="0" number="111"/>
+						<line branch="false" hits="0" number="112"/>
+						<line branch="false" hits="0" number="117"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/WETH9__MockForVault.sol" line-rate="0.45" name="test.0.8.25.vaults.contracts.WETH9__MockForVault.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="0" number="32"/>
+						<line branch="false" hits="0" number="36"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="0" number="53"/>
+						<line branch="false" hits="0" number="54"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="62"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/WstETH__Harness.sol" line-rate="0.5" name="test.0.8.25.vaults.contracts.WstETH__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="13"/>
+						<line branch="false" hits="1" number="17"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/StETH__HarnessForVaultHub.sol" line-rate="0.5333333333333333" name="test.0.8.25.vaults.contracts.StETH__HarnessForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="0" number="25"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="0" number="52"/>
+						<line branch="false" hits="0" number="53"/>
+						<line branch="false" hits="0" number="57"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/Dashboard__Mock.sol" line-rate="0.4" name="test.0.8.25.vaults.contracts.Dashboard__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="0" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/contracts/StakingVault__HarnessForTestUpgrade.sol" line-rate="0.8275862068965517" name="test.0.8.25.vaults.contracts.StakingVault__HarnessForTestUpgrade.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="34"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="81"/>
+						<line branch="false" hits="0" number="90"/>
+						<line branch="false" hits="0" number="98"/>
+						<line branch="false" hits="1" number="102"/>
+						<line branch="false" hits="0" number="110"/>
+						<line branch="false" hits="0" number="116"/>
+						<line branch="false" hits="1" number="123"/>
+						<line branch="false" hits="1" number="124"/>
+						<line branch="false" hits="1" number="141"/>
+						<line branch="false" hits="1" number="150"/>
+						<line branch="false" hits="1" number="160"/>
+						<line branch="false" hits="1" number="168"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.868421052631579" branch-rate="0.0" name="test.0.8.25.vaults.lazyOracle.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/lazyOracle/contracts/Lido__MockForLazyOracle.sol" line-rate="1.0" name="test.0.8.25.vaults.lazyOracle.contracts.Lido__MockForLazyOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/lazyOracle/contracts/OperatorGrid__MockForLazyOracle.sol" line-rate="1.0" name="test.0.8.25.vaults.lazyOracle.contracts.OperatorGrid__MockForLazyOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/lazyOracle/contracts/Vault__MockForLazyOracle.sol" line-rate="1.0" name="test.0.8.25.vaults.lazyOracle.contracts.Vault__MockForLazyOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/lazyOracle/contracts/VaultHub__MockForLazyOracle.sol" line-rate="0.8529411764705882" name="test.0.8.25.vaults.lazyOracle.contracts.VaultHub__MockForLazyOracle.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="0" number="71"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="0" number="83"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="0" number="91"/>
+						<line branch="false" hits="1" number="95"/>
+						<line branch="false" hits="1" number="96"/>
+						<line branch="false" hits="1" number="97"/>
+						<line branch="false" hits="1" number="98"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="0" number="101"/>
+						<line branch="false" hits="0" number="102"/>
+						<line branch="false" hits="1" number="103"/>
+						<line branch="false" hits="1" number="104"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="1" number="118"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="120"/>
+						<line branch="false" hits="1" number="121"/>
+						<line branch="false" hits="1" number="122"/>
+						<line branch="false" hits="1" number="123"/>
+						<line branch="false" hits="1" number="124"/>
+						<line branch="false" hits="1" number="126"/>
+						<line branch="false" hits="1" number="127"/>
+						<line branch="false" hits="1" number="128"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.7575757575757576" branch-rate="0.0" name="test.0.8.25.vaults.operatorGrid.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/operatorGrid/contracts/StakingVault__MockForOperatorGrid.sol" line-rate="0.75" name="test.0.8.25.vaults.operatorGrid.contracts.StakingVault__MockForOperatorGrid.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="0" number="24"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/operatorGrid/contracts/StETH__MockForOperatorGrid.sol" line-rate="0.0" name="test.0.8.25.vaults.operatorGrid.contracts.StETH__MockForOperatorGrid.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="12"/>
+						<line branch="false" hits="0" number="16"/>
+						<line branch="false" hits="0" number="20"/>
+						<line branch="false" hits="0" number="21"/>
+						<line branch="false" hits="0" number="25"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/operatorGrid/contracts/VaultHub__MockForOperatorGrid.sol" line-rate="0.9166666666666666" name="test.0.8.25.vaults.operatorGrid.contracts.VaultHub__MockForOperatorGrid.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.7647058823529411" branch-rate="0.0" name="test.0.8.25.vaults.permissions.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/permissions/contracts/OperatorGrid__MockForPermissions.sol" line-rate="1.0" name="test.0.8.25.vaults.permissions.contracts.OperatorGrid__MockForPermissions.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="11"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/permissions/contracts/PredepositGuarantee__MockPermissions.sol" line-rate="0.0" name="test.0.8.25.vaults.permissions.contracts.PredepositGuarantee__MockPermissions.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="10"/>
+						<line branch="false" hits="0" number="11"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/permissions/contracts/VaultHub__MockPermissions.sol" line-rate="0.7333333333333333" name="test.0.8.25.vaults.permissions.contracts.VaultHub__MockPermissions.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="78"/>
+						<line branch="false" hits="0" number="86"/>
+						<line branch="false" hits="0" number="87"/>
+						<line branch="false" hits="0" number="94"/>
+						<line branch="false" hits="0" number="98"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/permissions/contracts/Permissions__Harness.sol" line-rate="0.8235294117647058" name="test.0.8.25.vaults.permissions.contracts.Permissions__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="0" number="17"/>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="0" number="66"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="74"/>
+						<line branch="false" hits="1" number="78"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/permissions/contracts/VaultFactory__MockPermissions.sol" line-rate="0.7755102040816326" name="test.0.8.25.vaults.permissions.contracts.VaultFactory__MockPermissions.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="83"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="90"/>
+						<line branch="false" hits="1" number="92"/>
+						<line branch="false" hits="0" number="95"/>
+						<line branch="false" hits="0" number="97"/>
+						<line branch="false" hits="0" number="99"/>
+						<line branch="false" hits="0" number="100"/>
+						<line branch="false" hits="1" number="107"/>
+						<line branch="false" hits="1" number="110"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="0" number="120"/>
+						<line branch="false" hits="0" number="122"/>
+						<line branch="false" hits="0" number="124"/>
+						<line branch="false" hits="0" number="125"/>
+						<line branch="false" hits="1" number="130"/>
+						<line branch="false" hits="1" number="131"/>
+						<line branch="false" hits="1" number="132"/>
+						<line branch="false" hits="1" number="133"/>
+						<line branch="false" hits="1" number="134"/>
+						<line branch="false" hits="1" number="135"/>
+						<line branch="false" hits="1" number="136"/>
+						<line branch="false" hits="1" number="137"/>
+						<line branch="false" hits="1" number="138"/>
+						<line branch="false" hits="1" number="139"/>
+						<line branch="false" hits="1" number="140"/>
+						<line branch="false" hits="1" number="141"/>
+						<line branch="false" hits="1" number="142"/>
+						<line branch="false" hits="1" number="143"/>
+						<line branch="false" hits="1" number="144"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.6785714285714286" branch-rate="0.0" name="test.0.8.25.vaults.refSlotCache.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/refSlotCache/contracts/HashConsensus__Mock.sol" line-rate="1.0" name="test.0.8.25.vaults.refSlotCache.contracts.HashConsensus__Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="19"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/refSlotCache/contracts/RefSlotCacheTest.sol" line-rate="0.64" name="test.0.8.25.vaults.refSlotCache.contracts.RefSlotCacheTest.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="45"/>
+						<line branch="false" hits="0" number="46"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="0" number="80"/>
+						<line branch="false" hits="0" number="81"/>
+						<line branch="false" hits="0" number="82"/>
+						<line branch="false" hits="0" number="83"/>
+						<line branch="false" hits="0" number="84"/>
+						<line branch="false" hits="0" number="85"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.3" branch-rate="0.0" name="test.0.8.25.vaults.stakingVault.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/stakingVault/contracts/DepositContract__MockForStakingVault.sol" line-rate="1.0" name="test.0.8.25.vaults.stakingVault.contracts.DepositContract__MockForStakingVault.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/stakingVault/contracts/EthRejector.sol" line-rate="0.6666666666666666" name="test.0.8.25.vaults.stakingVault.contracts.EthRejector.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="0" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/stakingVault/contracts/LidoLocator__MockForStakingVault.sol" line-rate="0.0" name="test.0.8.25.vaults.stakingVault.contracts.LidoLocator__MockForStakingVault.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="8"/>
+						<line branch="false" hits="0" number="12"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/stakingVault/contracts/VaultFactory__MockForStakingVault.sol" line-rate="0.0" name="test.0.8.25.vaults.stakingVault.contracts.VaultFactory__MockForStakingVault.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="17"/>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="0" number="21"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.49612403100775193" branch-rate="0.0" name="test.0.8.25.vaults.vaulthub.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/DepositContract__MockForVaultHub.sol" line-rate="0.0" name="test.0.8.25.vaults.vaulthub.contracts.DepositContract__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="15"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/HashConsensus__MockForVaultHub.sol" line-rate="1.0" name="test.0.8.25.vaults.vaulthub.contracts.HashConsensus__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="8"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/Lido__MockForVaultHub.sol" line-rate="0.0" name="test.0.8.25.vaults.vaulthub.contracts.Lido__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="13"/>
+						<line branch="false" hits="0" number="17"/>
+						<line branch="false" hits="0" number="21"/>
+						<line branch="false" hits="0" number="25"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="0" number="33"/>
+						<line branch="false" hits="0" number="37"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/StakingVault__OssifiedSpoof.sol" line-rate="0.0" name="test.0.8.25.vaults.vaulthub.contracts.StakingVault__OssifiedSpoof.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="10"/>
+						<line branch="false" hits="0" number="14"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/PinnedBeaconProxy__BeaconOverride.sol" line-rate="0.0" name="test.0.8.25.vaults.vaulthub.contracts.PinnedBeaconProxy__BeaconOverride.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="26"/>
+						<line branch="false" hits="0" number="27"/>
+						<line branch="false" hits="0" number="28"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="0" number="35"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="48"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/StakingVault__MockForVaultHub.sol" line-rate="0.8095238095238095" name="test.0.8.25.vaults.vaulthub.contracts.StakingVault__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="0" number="32"/>
+						<line branch="false" hits="0" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="0" number="49"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="0" number="67"/>
+						<line branch="false" hits="1" number="71"/>
+						<line branch="false" hits="1" number="72"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="81"/>
+						<line branch="false" hits="1" number="85"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/VaultFactory__MockForVaultHub.sol" line-rate="1.0" name="test.0.8.25.vaults.vaulthub.contracts.VaultFactory__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="24"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/OperatorGrid__MockForVaultHub.sol" line-rate="1.0" name="test.0.8.25.vaults.vaulthub.contracts.OperatorGrid__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="65"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="68"/>
+						<line branch="false" hits="1" number="72"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/VaultHub__HarnessForReporting.sol" line-rate="0.0" name="test.0.8.25.vaults.vaulthub.contracts.VaultHub__HarnessForReporting.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="27"/>
+						<line branch="false" hits="0" number="28"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="0" number="52"/>
+						<line branch="false" hits="0" number="53"/>
+						<line branch="false" hits="0" number="54"/>
+						<line branch="false" hits="0" number="55"/>
+						<line branch="false" hits="0" number="56"/>
+						<line branch="false" hits="0" number="57"/>
+						<line branch="false" hits="0" number="58"/>
+						<line branch="false" hits="0" number="59"/>
+						<line branch="false" hits="0" number="60"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="62"/>
+						<line branch="false" hits="0" number="63"/>
+						<line branch="false" hits="0" number="64"/>
+						<line branch="false" hits="0" number="66"/>
+						<line branch="false" hits="0" number="67"/>
+						<line branch="false" hits="0" number="68"/>
+						<line branch="false" hits="0" number="69"/>
+						<line branch="false" hits="0" number="70"/>
+						<line branch="false" hits="0" number="71"/>
+						<line branch="false" hits="0" number="72"/>
+						<line branch="false" hits="0" number="73"/>
+						<line branch="false" hits="0" number="74"/>
+						<line branch="false" hits="0" number="75"/>
+						<line branch="false" hits="0" number="76"/>
+						<line branch="false" hits="0" number="77"/>
+						<line branch="false" hits="0" number="78"/>
+						<line branch="false" hits="0" number="80"/>
+						<line branch="false" hits="0" number="81"/>
+						<line branch="false" hits="0" number="83"/>
+						<line branch="false" hits="0" number="84"/>
+						<line branch="false" hits="0" number="85"/>
+						<line branch="false" hits="0" number="86"/>
+						<line branch="false" hits="0" number="87"/>
+						<line branch="false" hits="0" number="88"/>
+						<line branch="false" hits="0" number="89"/>
+						<line branch="false" hits="0" number="90"/>
+						<line branch="false" hits="0" number="91"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/vaulthub/contracts/LazyOracle__MockForVaultHub.sol" line-rate="1.0" name="test.0.8.25.vaults.vaulthub.contracts.LazyOracle__MockForVaultHub.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="62"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.22807017543859648" branch-rate="0.0" name="test.common.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/common/contracts/ERC1271Wallet.sol" line-rate="1.0" name="test.common.contracts.ERC1271Wallet.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="26"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/common/contracts/Utilities.sol" line-rate="0.025" name="test.common.contracts.Utilities.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="20"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="0" number="23"/>
+						<line branch="false" hits="0" number="24"/>
+						<line branch="false" hits="0" number="27"/>
+						<line branch="false" hits="0" number="28"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="0" number="32"/>
+						<line branch="false" hits="0" number="34"/>
+						<line branch="false" hits="0" number="35"/>
+						<line branch="false" hits="0" number="36"/>
+						<line branch="false" hits="0" number="38"/>
+						<line branch="false" hits="0" number="39"/>
+						<line branch="false" hits="0" number="40"/>
+						<line branch="false" hits="0" number="41"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="0" number="51"/>
+						<line branch="false" hits="0" number="52"/>
+						<line branch="false" hits="0" number="53"/>
+						<line branch="false" hits="0" number="54"/>
+						<line branch="false" hits="0" number="57"/>
+						<line branch="false" hits="0" number="58"/>
+						<line branch="false" hits="0" number="59"/>
+						<line branch="false" hits="0" number="60"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="70"/>
+						<line branch="false" hits="0" number="71"/>
+						<line branch="false" hits="0" number="73"/>
+						<line branch="false" hits="0" number="76"/>
+						<line branch="false" hits="0" number="78"/>
+						<line branch="false" hits="0" number="79"/>
+						<line branch="false" hits="0" number="82"/>
+						<line branch="false" hits="0" number="84"/>
+						<line branch="false" hits="0" number="85"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="0" number="92"/>
+						<line branch="false" hits="0" number="93"/>
+						<line branch="false" hits="0" number="94"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/common/contracts/GIndex__Harness.sol" line-rate="1.0" name="test.common.contracts.GIndex__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="51"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="1" number="68"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/common/contracts/BLS12_381__Harness.sol" line-rate="1.0" name="test.common.contracts.BLS12_381__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="38"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/common/contracts/BLS__Harness.sol" line-rate="0.07547169811320754" name="test.common.contracts.BLS__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="28"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="0" number="32"/>
+						<line branch="false" hits="0" number="33"/>
+						<line branch="false" hits="0" number="34"/>
+						<line branch="false" hits="0" number="35"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="45"/>
+						<line branch="false" hits="0" number="46"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="0" number="48"/>
+						<line branch="false" hits="0" number="49"/>
+						<line branch="false" hits="0" number="50"/>
+						<line branch="false" hits="0" number="51"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="0" number="55"/>
+						<line branch="false" hits="0" number="56"/>
+						<line branch="false" hits="0" number="60"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="62"/>
+						<line branch="false" hits="0" number="63"/>
+						<line branch="false" hits="0" number="64"/>
+						<line branch="false" hits="0" number="65"/>
+						<line branch="false" hits="0" number="66"/>
+						<line branch="false" hits="0" number="67"/>
+						<line branch="false" hits="0" number="68"/>
+						<line branch="false" hits="0" number="69"/>
+						<line branch="false" hits="0" number="70"/>
+						<line branch="false" hits="0" number="71"/>
+						<line branch="false" hits="0" number="72"/>
+						<line branch="false" hits="0" number="73"/>
+						<line branch="false" hits="0" number="74"/>
+						<line branch="false" hits="0" number="75"/>
+						<line branch="false" hits="0" number="76"/>
+						<line branch="false" hits="0" number="77"/>
+						<line branch="false" hits="0" number="78"/>
+						<line branch="false" hits="0" number="79"/>
+						<line branch="false" hits="0" number="80"/>
+						<line branch="false" hits="0" number="81"/>
+						<line branch="false" hits="0" number="85"/>
+						<line branch="false" hits="1" number="89"/>
+						<line branch="false" hits="1" number="90"/>
+						<line branch="false" hits="1" number="92"/>
+						<line branch="false" hits="0" number="93"/>
+						<line branch="false" hits="0" number="97"/>
+						<line branch="false" hits="0" number="98"/>
+						<line branch="false" hits="0" number="99"/>
+						<line branch="false" hits="0" number="100"/>
+						<line branch="false" hits="0" number="101"/>
+						<line branch="false" hits="0" number="103"/>
+						<line branch="false" hits="0" number="104"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
 		<package line-rate="1.0" branch-rate="0.0" name="contracts.0.8.9.utils.access" complexity="0">
 			<classes>
 				<class branch-rate="0.0" complexity="0" filename="contracts/0.8.9/utils/access/AccessControl.sol" line-rate="1.0" name="contracts.0.8.9.utils.access.AccessControl.sol">
@@ -2808,6 +5140,86 @@
 						<line branch="false" hits="1" number="67"/>
 						<line branch="false" hits="1" number="74"/>
 						<line branch="false" hits="1" number="75"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.717391304347826" branch-rate="0.0" name="test.0.8.25.vaults.nodeOperatorFee.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/nodeOperatorFee/contracts/StETH__MockForNodeOperatorFee.sol" line-rate="0.0" name="test.0.8.25.vaults.nodeOperatorFee.contracts.StETH__MockForNodeOperatorFee.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="12"/>
+						<line branch="false" hits="0" number="16"/>
+						<line branch="false" hits="0" number="20"/>
+						<line branch="false" hits="0" number="21"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/nodeOperatorFee/contracts/StakingVault__MockForNodeOperatorFee.sol" line-rate="0.5" name="test.0.8.25.vaults.nodeOperatorFee.contracts.StakingVault__MockForNodeOperatorFee.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="0" number="19"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/nodeOperatorFee/contracts/LazyOracle__MockForNodeOperatorFee.sol" line-rate="0.8333333333333334" name="test.0.8.25.vaults.nodeOperatorFee.contracts.LazyOracle__MockForNodeOperatorFee.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="0" number="15"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="29"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/nodeOperatorFee/contracts/VaultHub__MockForNodeOperatorFee.sol" line-rate="0.6111111111111112" name="test.0.8.25.vaults.nodeOperatorFee.contracts.VaultHub__MockForNodeOperatorFee.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="0" number="33"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="0" number="47"/>
+						<line branch="false" hits="0" number="51"/>
+						<line branch="false" hits="0" number="55"/>
+						<line branch="false" hits="0" number="59"/>
+						<line branch="false" hits="0" number="63"/>
+						<line branch="false" hits="0" number="67"/>
+						<line branch="false" hits="1" number="71"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/nodeOperatorFee/contracts/NodeOperatorFee__Harness.sol" line-rate="1.0" name="test.0.8.25.vaults.nodeOperatorFee.contracts.NodeOperatorFee__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="18"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="24"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/nodeOperatorFee/contracts/VaultFactory__MockForNodeOperatorFee.sol" line-rate="1.0" name="test.0.8.25.vaults.nodeOperatorFee.contracts.VaultFactory__MockForNodeOperatorFee.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="38"/>
 					</lines>
 				</class>
 			</classes>
@@ -2903,6 +5315,50 @@
 						<line branch="false" hits="1" number="95"/>
 						<line branch="false" hits="1" number="96"/>
 						<line branch="false" hits="1" number="98"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.4" branch-rate="0.0" name="test.0.8.9.oracle" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.9/oracle/VaultHub__MockForAccReport.sol" line-rate="0.4" name="test.0.8.9.oracle.VaultHub__MockForAccReport.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="11"/>
+						<line branch="false" hits="0" number="15"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="27"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.0" branch-rate="0.0" name="test.common" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/common/memUtils.h.sol" line-rate="0.0" name="test.common.memUtils.h.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="14"/>
+						<line branch="false" hits="0" number="15"/>
+						<line branch="false" hits="0" number="16"/>
+						<line branch="false" hits="0" number="21"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="0" number="28"/>
+						<line branch="false" hits="0" number="29"/>
+						<line branch="false" hits="0" number="30"/>
+						<line branch="false" hits="0" number="31"/>
+						<line branch="false" hits="0" number="36"/>
+						<line branch="false" hits="0" number="37"/>
+						<line branch="false" hits="0" number="42"/>
+						<line branch="false" hits="0" number="43"/>
+						<line branch="false" hits="0" number="48"/>
+						<line branch="false" hits="0" number="49"/>
+						<line branch="false" hits="0" number="54"/>
+						<line branch="false" hits="0" number="55"/>
+						<line branch="false" hits="0" number="56"/>
+						<line branch="false" hits="0" number="61"/>
+						<line branch="false" hits="0" number="62"/>
+						<line branch="false" hits="0" number="64"/>
 					</lines>
 				</class>
 			</classes>
@@ -5242,6 +7698,259 @@
 				</class>
 			</classes>
 		</package>
+		<package line-rate="0.9912663755458515" branch-rate="0.0" name="test.0.8.25.vaults.predepositGuarantee.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/predepositGuarantee/contracts/StakingVault__MockForPDG.sol" line-rate="1.0" name="test.0.8.25.vaults.predepositGuarantee.contracts.StakingVault__MockForPDG.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="44"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="70"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="104"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="116"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/predepositGuarantee/contracts/SSZBLSHelpers.sol" line-rate="0.988950276243094" name="test.0.8.25.vaults.predepositGuarantee.contracts.SSZBLSHelpers.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="0" number="22"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="34"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="45"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="49"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="54"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="66"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="73"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="82"/>
+						<line branch="false" hits="1" number="85"/>
+						<line branch="false" hits="1" number="86"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="88"/>
+						<line branch="false" hits="1" number="89"/>
+						<line branch="false" hits="1" number="90"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="1" number="92"/>
+						<line branch="false" hits="1" number="93"/>
+						<line branch="false" hits="1" number="94"/>
+						<line branch="false" hits="1" number="97"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="1" number="103"/>
+						<line branch="false" hits="1" number="107"/>
+						<line branch="false" hits="1" number="108"/>
+						<line branch="false" hits="1" number="109"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="1" number="118"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="120"/>
+						<line branch="false" hits="1" number="121"/>
+						<line branch="false" hits="1" number="122"/>
+						<line branch="false" hits="1" number="123"/>
+						<line branch="false" hits="1" number="124"/>
+						<line branch="false" hits="1" number="126"/>
+						<line branch="false" hits="1" number="128"/>
+						<line branch="false" hits="1" number="132"/>
+						<line branch="false" hits="1" number="135"/>
+						<line branch="false" hits="1" number="136"/>
+						<line branch="false" hits="1" number="138"/>
+						<line branch="false" hits="1" number="139"/>
+						<line branch="false" hits="1" number="143"/>
+						<line branch="false" hits="1" number="144"/>
+						<line branch="false" hits="1" number="145"/>
+						<line branch="false" hits="1" number="146"/>
+						<line branch="false" hits="1" number="156"/>
+						<line branch="false" hits="1" number="159"/>
+						<line branch="false" hits="1" number="160"/>
+						<line branch="false" hits="1" number="161"/>
+						<line branch="false" hits="1" number="162"/>
+						<line branch="false" hits="1" number="163"/>
+						<line branch="false" hits="1" number="164"/>
+						<line branch="false" hits="1" number="165"/>
+						<line branch="false" hits="1" number="166"/>
+						<line branch="false" hits="1" number="167"/>
+						<line branch="false" hits="1" number="168"/>
+						<line branch="false" hits="1" number="170"/>
+						<line branch="false" hits="1" number="171"/>
+						<line branch="false" hits="1" number="172"/>
+						<line branch="false" hits="1" number="173"/>
+						<line branch="false" hits="1" number="174"/>
+						<line branch="false" hits="1" number="175"/>
+						<line branch="false" hits="1" number="177"/>
+						<line branch="false" hits="1" number="179"/>
+						<line branch="false" hits="1" number="180"/>
+						<line branch="false" hits="1" number="181"/>
+						<line branch="false" hits="1" number="182"/>
+						<line branch="false" hits="1" number="184"/>
+						<line branch="false" hits="1" number="186"/>
+						<line branch="false" hits="1" number="188"/>
+						<line branch="false" hits="1" number="189"/>
+						<line branch="false" hits="1" number="190"/>
+						<line branch="false" hits="1" number="191"/>
+						<line branch="false" hits="1" number="196"/>
+						<line branch="false" hits="1" number="197"/>
+						<line branch="false" hits="1" number="198"/>
+						<line branch="false" hits="1" number="199"/>
+						<line branch="false" hits="1" number="204"/>
+						<line branch="false" hits="1" number="205"/>
+						<line branch="false" hits="1" number="206"/>
+						<line branch="false" hits="1" number="207"/>
+						<line branch="false" hits="1" number="208"/>
+						<line branch="false" hits="1" number="209"/>
+						<line branch="false" hits="1" number="210"/>
+						<line branch="false" hits="1" number="211"/>
+						<line branch="false" hits="1" number="212"/>
+						<line branch="false" hits="1" number="213"/>
+						<line branch="false" hits="1" number="216"/>
+						<line branch="false" hits="1" number="218"/>
+						<line branch="false" hits="1" number="222"/>
+						<line branch="false" hits="1" number="226"/>
+						<line branch="false" hits="1" number="227"/>
+						<line branch="false" hits="1" number="228"/>
+						<line branch="false" hits="1" number="231"/>
+						<line branch="false" hits="1" number="233"/>
+						<line branch="false" hits="1" number="236"/>
+						<line branch="false" hits="1" number="237"/>
+						<line branch="false" hits="1" number="238"/>
+						<line branch="false" hits="1" number="239"/>
+						<line branch="false" hits="1" number="240"/>
+						<line branch="false" hits="1" number="241"/>
+						<line branch="false" hits="1" number="242"/>
+						<line branch="false" hits="1" number="243"/>
+						<line branch="false" hits="1" number="245"/>
+						<line branch="false" hits="1" number="247"/>
+						<line branch="false" hits="1" number="251"/>
+						<line branch="false" hits="1" number="254"/>
+						<line branch="false" hits="1" number="255"/>
+						<line branch="false" hits="1" number="257"/>
+						<line branch="false" hits="1" number="258"/>
+						<line branch="false" hits="1" number="262"/>
+						<line branch="false" hits="1" number="263"/>
+						<line branch="false" hits="1" number="264"/>
+						<line branch="false" hits="1" number="265"/>
+						<line branch="false" hits="1" number="276"/>
+						<line branch="false" hits="1" number="277"/>
+						<line branch="false" hits="1" number="278"/>
+						<line branch="false" hits="1" number="279"/>
+						<line branch="false" hits="1" number="280"/>
+						<line branch="false" hits="1" number="281"/>
+						<line branch="false" hits="1" number="282"/>
+						<line branch="false" hits="1" number="283"/>
+						<line branch="false" hits="1" number="284"/>
+						<line branch="false" hits="1" number="285"/>
+						<line branch="false" hits="1" number="287"/>
+						<line branch="false" hits="1" number="288"/>
+						<line branch="false" hits="1" number="289"/>
+						<line branch="false" hits="1" number="290"/>
+						<line branch="false" hits="1" number="291"/>
+						<line branch="false" hits="1" number="292"/>
+						<line branch="false" hits="1" number="294"/>
+						<line branch="false" hits="1" number="295"/>
+						<line branch="false" hits="1" number="296"/>
+						<line branch="false" hits="1" number="297"/>
+						<line branch="false" hits="1" number="299"/>
+						<line branch="false" hits="1" number="300"/>
+						<line branch="false" hits="1" number="303"/>
+						<line branch="false" hits="1" number="306"/>
+						<line branch="false" hits="1" number="307"/>
+						<line branch="false" hits="1" number="308"/>
+						<line branch="false" hits="1" number="309"/>
+						<line branch="false" hits="1" number="310"/>
+						<line branch="false" hits="1" number="312"/>
+						<line branch="false" hits="1" number="313"/>
+						<line branch="false" hits="1" number="318"/>
+						<line branch="false" hits="1" number="319"/>
+						<line branch="false" hits="1" number="320"/>
+						<line branch="false" hits="1" number="321"/>
+						<line branch="false" hits="1" number="322"/>
+						<line branch="false" hits="1" number="323"/>
+						<line branch="false" hits="1" number="324"/>
+						<line branch="false" hits="1" number="325"/>
+						<line branch="false" hits="1" number="326"/>
+						<line branch="false" hits="1" number="327"/>
+						<line branch="false" hits="1" number="328"/>
+						<line branch="false" hits="1" number="329"/>
+						<line branch="false" hits="1" number="330"/>
+						<line branch="false" hits="1" number="331"/>
+						<line branch="false" hits="1" number="335"/>
+						<line branch="false" hits="1" number="339"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/predepositGuarantee/contracts/SSZMerkleTree.sol" line-rate="1.0" name="test.0.8.25.vaults.predepositGuarantee.contracts.SSZMerkleTree.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="56"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="58"/>
+						<line branch="false" hits="1" number="60"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="1" number="69"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="76"/>
+						<line branch="false" hits="1" number="77"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="80"/>
+						<line branch="false" hits="1" number="82"/>
+						<line branch="false" hits="1" number="84"/>
+						<line branch="false" hits="1" number="89"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/predepositGuarantee/contracts/CLProofVerifier__harness.sol" line-rate="1.0" name="test.0.8.25.vaults.predepositGuarantee.contracts.CLProofVerifier__harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="29"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
 		<package line-rate="0.045454545454545456" branch-rate="0.0" name="contracts.tooling.sepolia" complexity="0">
 			<classes>
 				<class branch-rate="0.0" complexity="0" filename="contracts/tooling/sepolia/SepoliaDepositAdapter.sol" line-rate="0.045454545454545456" name="contracts.tooling.sepolia.SepoliaDepositAdapter.sol">
@@ -5269,6 +7978,37 @@
 						<line branch="false" hits="0" number="104"/>
 						<line branch="false" hits="0" number="105"/>
 						<line branch="false" hits="0" number="106"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.8235294117647058" branch-rate="0.0" name="test.0.8.25.utils.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/utils/contracts/Confirmable2Addresses__Harness.sol" line-rate="0.8333333333333334" name="test.0.8.25.utils.contracts.Confirmable2Addresses__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="19"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="0" number="24"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/utils/contracts/AccessControlConfirmable__Harness.sol" line-rate="0.8181818181818182" name="test.0.8.25.utils.contracts.AccessControlConfirmable__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="15"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="22"/>
+						<line branch="false" hits="1" number="23"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="0" number="36"/>
+						<line branch="false" hits="0" number="37"/>
 					</lines>
 				</class>
 			</classes>
@@ -5721,6 +8461,47 @@
 						<line branch="false" hits="1" number="167"/>
 						<line branch="false" hits="1" number="169"/>
 						<line branch="false" hits="1" number="176"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.9090909090909091" branch-rate="0.0" name="test.0.8.25.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/contracts/StakingRouter_Mock.sol" line-rate="0.7777777777777778" name="test.0.8.25.contracts.StakingRouter_Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="24"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="0" number="44"/>
+						<line branch="false" hits="0" number="51"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/contracts/ValidatorExitDelayVerifier__Harness.sol" line-rate="1.0" name="test.0.8.25.contracts.ValidatorExitDelayVerifier__Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="36"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/contracts/ValidatorsExitBusOracle_Mock.sol" line-rate="1.0" name="test.0.8.25.contracts.ValidatorsExitBusOracle_Mock.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="32"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="39"/>
+						<line branch="false" hits="1" number="40"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="53"/>
 					</lines>
 				</class>
 			</classes>
@@ -6818,6 +9599,140 @@
 				</class>
 			</classes>
 		</package>
+		<package line-rate="1.0" branch-rate="0.0" name="test.0.6.12.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.6.12/contracts/StETH__HarnessForWstETH.sol" line-rate="1.0" name="test.0.6.12.contracts.StETH__HarnessForWstETH.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="12"/>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="1" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="25"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="31"/>
+						<line branch="false" hits="1" number="33"/>
+						<line branch="false" hits="1" number="35"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.8585858585858586" branch-rate="0.0" name="test.0.8.25.vaults.dashboard.contracts" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/dashboard/contracts/StETHPermit__HarnessForDashboard.sol" line-rate="0.8235294117647058" name="test.0.8.25.vaults.dashboard.contracts.StETHPermit__HarnessForDashboard.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="13"/>
+						<line branch="false" hits="0" number="17"/>
+						<line branch="false" hits="1" number="21"/>
+						<line branch="false" hits="1" number="26"/>
+						<line branch="false" hits="1" number="29"/>
+						<line branch="false" hits="1" number="30"/>
+						<line branch="false" hits="1" number="35"/>
+						<line branch="false" hits="1" number="36"/>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="57"/>
+						<line branch="false" hits="1" number="61"/>
+						<line branch="false" hits="1" number="64"/>
+						<line branch="false" hits="0" number="66"/>
+						<line branch="false" hits="0" number="67"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="test/0.8.25/vaults/dashboard/contracts/VaultHub__MockForDashboard.sol" line-rate="0.8658536585365854" name="test.0.8.25.vaults.dashboard.contracts.VaultHub__MockForDashboard.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="1" number="37"/>
+						<line branch="false" hits="1" number="38"/>
+						<line branch="false" hits="1" number="41"/>
+						<line branch="false" hits="1" number="42"/>
+						<line branch="false" hits="1" number="43"/>
+						<line branch="false" hits="1" number="46"/>
+						<line branch="false" hits="1" number="47"/>
+						<line branch="false" hits="1" number="48"/>
+						<line branch="false" hits="1" number="50"/>
+						<line branch="false" hits="1" number="52"/>
+						<line branch="false" hits="1" number="55"/>
+						<line branch="false" hits="1" number="59"/>
+						<line branch="false" hits="1" number="63"/>
+						<line branch="false" hits="1" number="67"/>
+						<line branch="false" hits="0" number="71"/>
+						<line branch="false" hits="1" number="75"/>
+						<line branch="false" hits="1" number="79"/>
+						<line branch="false" hits="1" number="83"/>
+						<line branch="false" hits="1" number="87"/>
+						<line branch="false" hits="1" number="91"/>
+						<line branch="false" hits="0" number="95"/>
+						<line branch="false" hits="1" number="99"/>
+						<line branch="false" hits="1" number="100"/>
+						<line branch="false" hits="1" number="101"/>
+						<line branch="false" hits="1" number="105"/>
+						<line branch="false" hits="1" number="109"/>
+						<line branch="false" hits="1" number="110"/>
+						<line branch="false" hits="1" number="111"/>
+						<line branch="false" hits="1" number="112"/>
+						<line branch="false" hits="1" number="113"/>
+						<line branch="false" hits="1" number="114"/>
+						<line branch="false" hits="1" number="115"/>
+						<line branch="false" hits="1" number="116"/>
+						<line branch="false" hits="1" number="117"/>
+						<line branch="false" hits="1" number="118"/>
+						<line branch="false" hits="1" number="119"/>
+						<line branch="false" hits="1" number="120"/>
+						<line branch="false" hits="1" number="122"/>
+						<line branch="false" hits="1" number="124"/>
+						<line branch="false" hits="0" number="128"/>
+						<line branch="false" hits="0" number="129"/>
+						<line branch="false" hits="1" number="130"/>
+						<line branch="false" hits="1" number="132"/>
+						<line branch="false" hits="1" number="133"/>
+						<line branch="false" hits="0" number="137"/>
+						<line branch="false" hits="1" number="138"/>
+						<line branch="false" hits="1" number="140"/>
+						<line branch="false" hits="1" number="141"/>
+						<line branch="false" hits="1" number="145"/>
+						<line branch="false" hits="1" number="149"/>
+						<line branch="false" hits="1" number="153"/>
+						<line branch="false" hits="1" number="162"/>
+						<line branch="false" hits="1" number="166"/>
+						<line branch="false" hits="1" number="170"/>
+						<line branch="false" hits="1" number="174"/>
+						<line branch="false" hits="1" number="178"/>
+						<line branch="false" hits="1" number="179"/>
+						<line branch="false" hits="1" number="180"/>
+						<line branch="false" hits="1" number="181"/>
+						<line branch="false" hits="0" number="183"/>
+						<line branch="false" hits="0" number="184"/>
+						<line branch="false" hits="1" number="185"/>
+						<line branch="false" hits="1" number="186"/>
+						<line branch="false" hits="1" number="190"/>
+						<line branch="false" hits="1" number="194"/>
+						<line branch="false" hits="1" number="198"/>
+						<line branch="false" hits="1" number="199"/>
+						<line branch="false" hits="1" number="203"/>
+						<line branch="false" hits="1" number="204"/>
+						<line branch="false" hits="1" number="208"/>
+						<line branch="false" hits="1" number="209"/>
+						<line branch="false" hits="0" number="211"/>
+						<line branch="false" hits="1" number="213"/>
+						<line branch="false" hits="0" number="221"/>
+						<line branch="false" hits="0" number="222"/>
+						<line branch="false" hits="1" number="229"/>
+						<line branch="false" hits="1" number="233"/>
+						<line branch="false" hits="1" number="237"/>
+						<line branch="false" hits="1" number="241"/>
+						<line branch="false" hits="1" number="245"/>
+						<line branch="false" hits="0" number="257"/>
+						<line branch="false" hits="1" number="258"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
 		<package line-rate="0.9887640449438202" branch-rate="0.0" name="contracts.tooling" complexity="0">
 			<classes>
 				<class branch-rate="0.0" complexity="0" filename="contracts/tooling/AlertingHarness.sol" line-rate="0.9887640449438202" name="contracts.tooling.AlertingHarness.sol">
@@ -6912,6 +9827,18 @@
 						<line branch="false" hits="1" number="302"/>
 						<line branch="false" hits="1" number="308"/>
 						<line branch="false" hits="1" number="314"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package line-rate="0.0" branch-rate="0.0" name="test.upgrade" complexity="0">
+			<classes>
+				<class branch-rate="0.0" complexity="0" filename="test/upgrade/V3Template_Harness.sol" line-rate="0.0" name="test.upgrade.V3Template_Harness.sol">
+					<methods/>
+					<lines>
+						<line branch="false" hits="0" number="10"/>
+						<line branch="false" hits="0" number="14"/>
+						<line branch="false" hits="0" number="15"/>
 					</lines>
 				</class>
 			</classes>
