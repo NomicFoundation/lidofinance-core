@@ -1,8 +1,14 @@
-import { ethers } from "hardhat";
+import { fileURLToPath } from "node:url";
 
-import { log } from "lib/log";
+import hre from "hardhat";
+
+import { log } from "lib/log.js";
+
+const __filename = fileURLToPath(import.meta.url);
 
 async function main() {
+  const { ethers } = await hre.network.getOrCreate();
+
   log.scriptStart(__filename);
 
   // 0x01 is too little, 0x80 works, although less might be enough

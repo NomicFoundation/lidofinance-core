@@ -1,24 +1,26 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers, HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import { Dashboard, LazyOracle, StakingVault, VaultHub } from "typechain-types";
+import type { Dashboard, LazyOracle, StakingVault, VaultHub } from "typechain-types/index.js";
 
-import { advanceChainTime, days, ether, getCurrentBlockTimestamp, impersonate, randomAddress } from "lib";
+import { advanceChainTime, days, ether, getCurrentBlockTimestamp, impersonate, randomAddress } from "lib/index.js";
+import { calculateLockedValue, createVaultsReportTree, type VaultReportItem } from "lib/protocol/helpers/vaults.js";
 import {
   createVaultWithDashboard,
   getProtocolContext,
-  ProtocolContext,
+  type ProtocolContext,
   report,
   reportVaultDataWithProof,
   setupLidoForVaults,
-} from "lib/protocol";
-import { calculateLockedValue, createVaultsReportTree, VaultReportItem } from "lib/protocol/helpers/vaults";
+} from "lib/protocol/index.js";
 
-import { Snapshot } from "test/suite";
+import { Snapshot } from "test/suite/index.js";
 
 describe("Integration: LazyOracle", () => {
+  let ethers: HardhatEthers;
+
   let ctx: ProtocolContext;
   let snapshot: string;
   let originalSnapshot: string;
@@ -33,6 +35,8 @@ describe("Integration: LazyOracle", () => {
   let stranger: HardhatEthersSigner;
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     ctx = await getProtocolContext();
     originalSnapshot = await Snapshot.take();
 
@@ -343,7 +347,7 @@ describe("Integration: LazyOracle", () => {
           totalValue: slashedTotalValue,
           waitForNextRefSlot: true,
         }),
-      ).to.not.be.reverted;
+      ).to.not.revert(ethers);
     });
 
     it("InOutDelta cache in fund", async () => {
@@ -552,8 +556,9 @@ describe("Integration: LazyOracle", () => {
 
       it("Should accept report with same cumulative Lido fees (no change)", async () => {
         // Same cumulative fees should be accepted
-        await expect(reportVaultDataWithProof(ctx, stakingVault, { cumulativeLidoFees: ether("5") })).to.not.be
-          .reverted;
+        await expect(reportVaultDataWithProof(ctx, stakingVault, { cumulativeLidoFees: ether("5") })).to.not.revert(
+          ethers,
+        );
 
         expect(await vaultHub.isReportFresh(stakingVault)).to.equal(true);
       });
@@ -570,7 +575,7 @@ describe("Integration: LazyOracle", () => {
             cumulativeLidoFees: ether("5") + validFeeIncrease,
             reportTimestamp: (await lazyOracle.latestReportTimestamp()) + timeDelta,
           }),
-        ).to.not.be.reverted;
+        ).to.not.revert(ethers);
 
         expect(await vaultHub.isReportFresh(stakingVault)).to.equal(true);
 
@@ -605,7 +610,7 @@ describe("Integration: LazyOracle", () => {
             cumulativeLidoFees: ether("5") + maxFeeIncrease,
             reportTimestamp: (await lazyOracle.latestReportTimestamp()) + timeDelta,
           }),
-        ).to.not.be.reverted;
+        ).to.not.revert(ethers);
 
         expect(await vaultHub.isReportFresh(stakingVault)).to.equal(true);
       });
@@ -622,7 +627,7 @@ describe("Integration: LazyOracle", () => {
           reportVaultDataWithProof(ctx, stakingVault, {
             cumulativeLidoFees: ether("5") + validFeeIncrease,
           }),
-        ).to.not.be.reverted;
+        ).to.not.revert(ethers);
 
         const record = await vaultHub.vaultRecord(stakingVault);
         expect(record.cumulativeLidoFees).to.equal(ether("5") + validFeeIncrease);
@@ -682,7 +687,7 @@ describe("Integration: LazyOracle", () => {
           liabilityShares: snapshotLiab,
           maxLiabilityShares: snapshotMaxLiab,
         }),
-      ).to.not.be.reverted;
+      ).to.not.revert(ethers);
     });
 
     it("oracle cannot inflate record.maxLiabilityShares beyond on-chain value", async () => {
