@@ -1,10 +1,13 @@
 import { expect } from "chai";
-import { BigNumberish, BytesLike, encodeBytes32String } from "ethers";
-import { ethers } from "hardhat";
+import { type BigNumberish, type BytesLike, encodeBytes32String } from "ethers";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import { type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import { ACL, Kernel, Lido, LidoLocator, NodeOperatorsRegistry__Harness } from "typechain-types";
+import type { ACL } from "typechain-types/@aragon/os/contracts/acl/ACL.js";
+import type { Kernel } from "typechain-types/@aragon/os/contracts/kernel/Kernel.js";
+import { type Lido, type LidoLocator, type NodeOperatorsRegistry__Harness } from "typechain-types/index.js";
 
 import {
   addNodeOperator,
@@ -14,15 +17,17 @@ import {
   ether,
   FakeValidatorKeys,
   impersonate,
-  NodeOperatorConfig,
+  type NodeOperatorConfig,
   randomAddress,
   unpackKeySig,
-} from "lib";
+} from "#lib";
 
-import { addAragonApp, deployLidoDao } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { addAragonApp, deployLidoDao } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
 describe("NodeOperatorsRegistry.sol:signing-keys", () => {
+  let ethers: HardhatEthers;
+
   const UINT64_MAX = 2n ** 64n - 1n;
 
   let deployer: HardhatEthersSigner;
@@ -106,6 +111,8 @@ describe("NodeOperatorsRegistry.sol:signing-keys", () => {
   const thirdNOKeys = new FakeValidatorKeys(30, { kFill: "c", sFill: "d" });
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     [deployer, user, stakingRouter, nodeOperatorsManager, signingKeysManager, limitsManager, stranger] =
       await ethers.getSigners();
 
@@ -120,7 +127,8 @@ describe("NodeOperatorsRegistry.sol:signing-keys", () => {
     const allocLib = await ethers.deployContract("MinFirstAllocationStrategy", deployer);
     const norHarnessFactory = await ethers.getContractFactory("NodeOperatorsRegistry__Harness", {
       libraries: {
-        ["contracts/common/lib/MinFirstAllocationStrategy.sol:MinFirstAllocationStrategy"]: await allocLib.getAddress(),
+        ["project/contracts/common/lib/MinFirstAllocationStrategy.sol:MinFirstAllocationStrategy"]:
+          await allocLib.getAddress(),
       },
     });
 

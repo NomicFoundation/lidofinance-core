@@ -1,21 +1,22 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import { MaxUint256 } from "ethers";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers, HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
 import {
-  ConsolidationGateway,
-  DepositSecurityModule__MockForConsolidationGateway,
-  Lido__MockForConsolidationGateway,
-  WithdrawalVault__MockForConsolidationGateway,
-} from "typechain-types";
+  type ConsolidationGateway,
+  type DepositSecurityModule__MockForConsolidationGateway,
+  type Lido__MockForConsolidationGateway,
+  type WithdrawalVault__MockForConsolidationGateway,
+} from "typechain-types/index.js";
 
-import { addressToWC, advanceChainTime, generateValidator, prepareLocalMerkleTree } from "lib";
+import { addressToWC, advanceChainTime, generateValidator, prepareLocalMerkleTree } from "#lib";
 
-import { deployLidoLocator, updateLidoLocatorImplementation } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { deployLidoLocator, updateLidoLocatorImplementation } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
-import { PUBKEYS } from "../consolidation-helpers";
+import { PUBKEYS } from "../consolidation-helpers.js";
 
 // Helper functions
 const grantLimitManagerRole = async (consolidationGateway: ConsolidationGateway, account: HardhatEthersSigner) => {
@@ -41,7 +42,7 @@ const expectLimitData = async (
   expectedPerFrame: number,
   expectedFrameDuration: number,
   expectedPrevLimit: number,
-  expectedCurrentLimit: number | typeof ethers.MaxUint256,
+  expectedCurrentLimit: number | typeof MaxUint256,
 ) => {
   const data = await consolidationGateway.getConsolidationRequestLimitFullInfo();
   expect(data[0]).to.equal(expectedMaxRequests); // maxConsolidationRequestsLimit
@@ -52,6 +53,8 @@ const expectLimitData = async (
 };
 
 describe("ConsolidationGateway.sol: rate limit management", () => {
+  let ethers: HardhatEthers;
+
   let consolidationGateway: ConsolidationGateway;
   let withdrawalVault: WithdrawalVault__MockForConsolidationGateway;
   let admin: HardhatEthersSigner;
@@ -70,6 +73,8 @@ describe("ConsolidationGateway.sol: rate limit management", () => {
   let originalState: string;
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     [admin, authorizedEntity, stranger] = await ethers.getSigners();
 
     const locator = await deployLidoLocator();

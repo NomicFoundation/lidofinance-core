@@ -1,15 +1,15 @@
 import { expect } from "chai";
-import { ZeroAddress } from "ethers";
-import { ethers } from "hardhat";
+import { AbiCoder, keccak256, ZeroAddress } from "ethers";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers, HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import { NodeOperatorsRegistry, ValidatorsExitBusOracle, WithdrawalVault } from "typechain-types";
+import type { NodeOperatorsRegistry, ValidatorsExitBusOracle, WithdrawalVault } from "typechain-types/index.js";
 
-import { de0x, ether, numberToHex } from "lib";
-import { getProtocolContext, ProtocolContext } from "lib/protocol";
+import { de0x, ether, numberToHex } from "#lib";
+import { getProtocolContext, type ProtocolContext } from "#lib/protocol";
 
-import { bailOnFailure, Snapshot } from "test/suite";
+import { bailOnFailure, Snapshot } from "#test/suite";
 
 interface ExitRequest {
   moduleId: number;
@@ -25,12 +25,12 @@ const encodeExitRequestHex = ({ moduleId, nodeOpId, valIndex, valPubkey }: ExitR
 };
 
 const hashExitRequest = (request: { dataFormat: number; data: string }) => {
-  return ethers.keccak256(
-    ethers.AbiCoder.defaultAbiCoder().encode(["bytes", "uint256"], [request.data, request.dataFormat]),
-  );
+  return keccak256(AbiCoder.defaultAbiCoder().encode(["bytes", "uint256"], [request.data, request.dataFormat]));
 };
 
 describe("Scenario: ValidatorsExitBus Submit and Trigger Exits", () => {
+  let ethers: HardhatEthers;
+
   let ctx: ProtocolContext;
   let snapshot: string;
 
@@ -60,6 +60,8 @@ describe("Scenario: ValidatorsExitBus Submit and Trigger Exits", () => {
   const exitRequestsHash: string = hashExitRequest(exitRequest);
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     ctx = await getProtocolContext();
     veb = ctx.contracts.validatorsExitBusOracle;
     wv = ctx.contracts.withdrawalVault;

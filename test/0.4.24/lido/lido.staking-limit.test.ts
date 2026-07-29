@@ -1,18 +1,23 @@
 import { expect } from "chai";
 import { MaxUint256, ZeroAddress } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { mine } from "@nomicfoundation/hardhat-network-helpers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import type { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import { ACL, Lido } from "typechain-types";
+import type { ACL } from "typechain-types/@aragon/os/contracts/acl/ACL.js";
+import { type Lido } from "typechain-types/index.js";
 
-import { certainAddress, ether, ONE_ETHER } from "lib";
+import { certainAddress, ether, ONE_ETHER } from "#lib";
 
-import { deployLidoDao } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { deployLidoDao } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
 describe("Lido.sol:staking-limit", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let deployer: HardhatEthersSigner;
   let user: HardhatEthersSigner;
   let stranger: HardhatEthersSigner;
@@ -26,6 +31,8 @@ describe("Lido.sol:staking-limit", () => {
   let originalState: string;
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
+
     [deployer, user, stranger] = await ethers.getSigners();
 
     ({ lido, acl } = await deployLidoDao({ rootAccount: deployer, initialized: true }));
@@ -67,7 +74,7 @@ describe("Lido.sol:staking-limit", () => {
       const fullReplenishInBlocks = maxStakeLimit / stakeLimitIncreasePerBlock;
 
       for (let i = 1n; i <= fullReplenishInBlocks; i++) {
-        await mine(1);
+        await networkHelpers.mine(1);
         expect(await lido.getCurrentStakeLimit()).to.equal(stakeLimitIncreasePerBlock * i);
       }
     });
@@ -160,7 +167,7 @@ describe("Lido.sol:staking-limit", () => {
       expect(await lido.getStakeLimitFullInfo()).to.deep.equal(Object.values(expected));
 
       for (let i = 1n; i <= expected.maxStakeLimitGrowthBlocks; i++) {
-        await mine(1);
+        await networkHelpers.mine(1);
         expected.currentStakeLimit = (expected.maxStakeLimit / expected.maxStakeLimitGrowthBlocks) * i;
         expect(await lido.getStakeLimitFullInfo()).to.deep.equal(Object.values(expected));
       }

@@ -1,4 +1,4 @@
-import { applyMigrationScript, loadSteps, log, resolveMigrationFile } from "lib";
+import { applyMigrationScript, loadSteps, log, resolveMigrationFile } from "#lib";
 
 const runMigrations = async (stepsFile: string): Promise<void> => {
   const steps = loadSteps(stepsFile);
@@ -11,13 +11,10 @@ const runMigrations = async (stepsFile: string): Promise<void> => {
   process.exit(0);
 };
 
-// Execute the script if it's run directly
-if (require.main === module) {
-  const stepsFile = process.env.STEPS_FILE;
-  if (!stepsFile) {
-    log.error("Please provide a STEPS_FILE environment variable!");
-    process.exit(1);
-  }
-
-  runMigrations(stepsFile).catch(() => process.exit(1));
+const stepsFile = process.env.STEPS_FILE;
+if (!stepsFile) {
+  log.error("Please provide a STEPS_FILE environment variable!");
+  process.exit(1);
 }
+
+await runMigrations(stepsFile).catch(() => process.exit(1));

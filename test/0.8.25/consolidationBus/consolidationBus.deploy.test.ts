@@ -1,14 +1,20 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { ConsolidationGateway__MockForConsolidationBus } from "typechain-types";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
 
-import { proxify } from "lib/proxy";
+import { type ConsolidationGateway__MockForConsolidationBus } from "typechain-types/index.js";
+
+import { proxify } from "lib/proxy.js";
 
 describe("ConsolidationBus.sol: deployment", () => {
+  let ethers: HardhatEthers;
+
   let consolidationGateway: ConsolidationGateway__MockForConsolidationBus;
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     consolidationGateway = await ethers.deployContract("ConsolidationGateway__MockForConsolidationBus");
   });
 

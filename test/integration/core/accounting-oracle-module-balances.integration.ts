@@ -1,25 +1,28 @@
 import { expect } from "chai";
 import { getBigInt } from "ethers";
+import hre from "hardhat";
 
-import { ether, ONE_GWEI } from "lib";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+
+import { ether, ONE_GWEI } from "#lib";
 import {
   buildModuleAccountingReportParams,
   depositValidatorsWithoutReport,
   getNextReportContext,
   getProtocolContext,
   norSdvtEnsureOperators,
-  ProtocolContext,
+  type ProtocolContext,
   report,
   reportWithoutClActivation,
   seedProtocolPendingBaseline,
   submitReportDataWithConsensus,
   submitReportDataWithConsensusAndEmptyExtraData,
   updateOracleReportLimits,
-} from "lib/protocol";
-import { adjustReportModuleBalances } from "lib/protocol/helpers/accounting";
-import { NOR_MODULE_ID } from "lib/protocol/helpers/staking-module";
+} from "#lib/protocol";
+import { adjustReportModuleBalances } from "lib/protocol/helpers/accounting.js";
+import { NOR_MODULE_ID } from "lib/protocol/helpers/staking-module.js";
 
-import { Snapshot } from "test/suite";
+import { Snapshot } from "#test/suite";
 
 const ONE_DAY = 24n * 60n * 60n;
 const ONE_VALIDATOR_BALANCE_ETH = 32n;
@@ -30,6 +33,7 @@ const SECONDS_PER_YEAR = 365n * ONE_DAY;
 const sumBigints = (values: bigint[]) => values.reduce((sum, value) => sum + value, 0n);
 
 describe("Integration: AccountingOracle module balances sanity", () => {
+  let ethers: HardhatEthers;
   let ctx: ProtocolContext;
 
   let snapshot: string;
@@ -37,6 +41,7 @@ describe("Integration: AccountingOracle module balances sanity", () => {
   let carriedPendingBalanceGwei: bigint;
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
     ctx = await getProtocolContext();
     snapshot = await Snapshot.take();
 
@@ -161,7 +166,7 @@ describe("Integration: AccountingOracle module balances sanity", () => {
       clPendingBalanceGwei: 0n,
     });
 
-    await expect(submitReportDataWithConsensus(ctx, data)).to.not.be.reverted;
+    await expect(submitReportDataWithConsensus(ctx, data)).to.not.be.revert(ethers);
   });
 
   it("should reject a report whose module validators balances do not add up to the reported CL validators total", async () => {

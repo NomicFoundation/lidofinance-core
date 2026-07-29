@@ -17,7 +17,7 @@ const gitignorePath = path.resolve(__dirname, ".gitignore");
 export default [
   includeIgnoreFile(gitignorePath),
   {
-    ignores: [".solcover.js", "eslint.config.mjs", "**/archive/**"],
+    ignores: ["eslint.config.mjs", "**/archive/**"],
   },
   js.configs.recommended,
   ...ts.configs.recommended,
@@ -40,7 +40,7 @@ export default [
       "no-only-tests/no-only-tests": "warn",
       "no-shadow": "off",
       "simple-import-sort/imports": ["error", {
-        "groups": [["^node:"], ["^\\u0000"], ["^[^@]\\w"], ["^@\\w"], ["^typechain-types"], ["^lib"], ["^test"], ["^../"], ["^./"], ["^"]],
+        "groups": [["^node:"], ["^\\u0000"], ["^[^@]\\w"], ["^@\\w"], ["^typechain-types"], ["^#?lib"], ["^#?test"], ["^../"], ["^./"], ["^"]],
       }],
     },
   },

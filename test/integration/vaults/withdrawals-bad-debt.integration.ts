@@ -1,27 +1,30 @@
 import { expect } from "chai";
 import { ZeroAddress } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { setBalance } from "@nomicfoundation/hardhat-network-helpers";
+import type { HardhatEthers, HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import { advanceChainTime, ether } from "lib";
-import { LIMITER_PRECISION_BASE } from "lib/constants";
+import { advanceChainTime, ether } from "#lib";
 import {
   getProtocolContext,
-  ProtocolContext,
+  type ProtocolContext,
   queueBadDebtInternalization,
   removeStakingLimit,
   reportWithoutClActivation,
   setupLidoForVaults,
   setupVaultWithBadDebt,
   upDefaultTierShareLimit,
-} from "lib/protocol";
+} from "#lib/protocol";
+import { LIMITER_PRECISION_BASE } from "lib/constants.js";
 
-import { Snapshot } from "test/suite";
-import { SHARE_RATE_PRECISION } from "test/suite/constants";
+import { Snapshot } from "#test/suite";
+import { SHARE_RATE_PRECISION } from "test/suite/constants.js";
 
 describe("Integration: Withdrawals finalization with bad debt internalization", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let ctx: ProtocolContext;
   let snapshot: string;
   let originalSnapshot: string;
@@ -178,7 +181,7 @@ describe("Integration: Withdrawals finalization with bad debt internalization", 
 
     // Submit enough ETH
     await removeStakingLimit(ctx);
-    await setBalance(stranger.address, requestsSum + ether("1")); // Some extra for gas
+    await networkHelpers.setBalance(stranger.address, requestsSum + ether("1")); // Some extra for gas
     await lido.connect(stranger).submit(ZeroAddress, { value: requestsSum });
 
     // Approve WQ to spend stETH
@@ -248,6 +251,7 @@ describe("Integration: Withdrawals finalization with bad debt internalization", 
   };
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
     ctx = await getProtocolContext();
     originalSnapshot = await Snapshot.take();
 

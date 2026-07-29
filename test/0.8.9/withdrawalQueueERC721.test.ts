@@ -1,18 +1,19 @@
 import { expect } from "chai";
 import { ZeroAddress } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { setBalance } from "@nomicfoundation/hardhat-network-helpers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import { type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import {
+import type {
   ERC721Receiver__Mock,
   NFTDescriptor__MockForWithdrawalQueue,
   Receiver__MockForWithdrawalQueueBase,
   StETH__HarnessForWithdrawalQueue,
   WithdrawalQueueERC721,
   WstETH__MockForWithdrawalQueue,
-} from "typechain-types";
+} from "typechain-types/index.js";
 
 import {
   ERC165_INTERFACE_ID,
@@ -29,9 +30,9 @@ import {
   streccak,
   WITHDRAWAL_QUEUE_NAME,
   WITHDRAWAL_QUEUE_SYMBOL,
-} from "lib";
+} from "#lib";
 
-import { Snapshot } from "test/suite";
+import { Snapshot } from "#test/suite";
 
 const MANAGE_TOKEN_URI_ROLE = streccak("MANAGE_TOKEN_URI_ROLE");
 
@@ -39,6 +40,9 @@ const MOCK_NFT_DESCRIPTOR_BASE_URI = "https://example-descriptor.com/";
 const MOCK_TOKEN_BASE_URL = "https://example.com";
 
 describe("WithdrawalQueueERC721.sol", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let owner: HardhatEthersSigner;
   let user: HardhatEthersSigner;
   let stranger: HardhatEthersSigner;
@@ -59,6 +63,8 @@ describe("WithdrawalQueueERC721.sol", () => {
   let originalState: string;
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
+
     [owner, user, stranger, tokenManager, finalizer] = await ethers.getSigners();
 
     nftDescriptor = await ethers.deployContract("NFTDescriptor__MockForWithdrawalQueue", [
@@ -407,7 +413,7 @@ describe("WithdrawalQueueERC721.sol", () => {
     });
 
     it("Reverts when token is already claimed", async () => {
-      await setBalance(queueAddress, ether("10.00"));
+      await networkHelpers.setBalance(queueAddress, ether("10.00"));
 
       await queue.connect(user).requestWithdrawals([ether("25.00")], user);
       await queue.connect(finalizer).finalize(1, shareRate(300n), { value: ether("25.00") });
@@ -641,7 +647,7 @@ describe("WithdrawalQueueERC721.sol", () => {
     });
 
     it("Reverts if request is already claimed", async () => {
-      await setBalance(queueAddress, ether("10.00"));
+      await networkHelpers.setBalance(queueAddress, ether("10.00"));
 
       await queue.connect(user).requestWithdrawals([ether("25.00")], user);
       await queue.connect(finalizer).finalize(1, shareRate(300n), { value: ether("25.00") });

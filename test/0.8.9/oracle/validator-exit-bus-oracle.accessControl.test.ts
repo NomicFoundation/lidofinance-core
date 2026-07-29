@@ -1,19 +1,19 @@
 import { expect } from "chai";
 import { ContractTransactionResponse, ZeroAddress } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import { type HardhatEthers, type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import {
+import type {
   HashConsensus__Harness,
   StakingModule__MockForKeyVerification,
   ValidatorsExitBus__Harness,
-} from "typechain-types";
+} from "typechain-types/index.js";
 
-import { de0x, numberToHex, VEBO_CONSENSUS_VERSION } from "lib";
+import { de0x, numberToHex, VEBO_CONSENSUS_VERSION } from "#lib";
 
-import { DATA_FORMAT_LIST_WITH_KEY_INDEX, deployVEBO, initVEBO, seedMockModuleSigningKeys } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { DATA_FORMAT_LIST_WITH_KEY_INDEX, deployVEBO, initVEBO, seedMockModuleSigningKeys } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
 const PUBKEYS = [
   "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -22,6 +22,8 @@ const PUBKEYS = [
 ];
 
 describe("ValidatorsExitBusOracle.sol:accessControl", () => {
+  let ethers: HardhatEthers;
+
   let consensus: HashConsensus__Harness;
   let oracle: ValidatorsExitBus__Harness;
   let admin: HardhatEthersSigner;
@@ -123,6 +125,8 @@ describe("ValidatorsExitBusOracle.sol:accessControl", () => {
   };
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     [admin, member1, member2, member3, stranger, account1] = await ethers.getSigners();
 
     const deployed = await deployVEBO(admin.address);

@@ -1,17 +1,20 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { getStorageAt, setStorageAt } from "@nomicfoundation/hardhat-network-helpers";
+import { type HardhatEthers, type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import { LidoLocator, ValidatorsExitBus__Harness } from "typechain-types";
+import type { LidoLocator, ValidatorsExitBus__Harness } from "typechain-types/index.js";
 
-import { EPOCHS_PER_FRAME, INITIAL_FAST_LANE_LENGTH_SLOTS, SLOTS_PER_EPOCH, VEBO_CONSENSUS_VERSION } from "lib";
+import { EPOCHS_PER_FRAME, INITIAL_FAST_LANE_LENGTH_SLOTS, SLOTS_PER_EPOCH, VEBO_CONSENSUS_VERSION } from "#lib";
 
-import { deployLidoLocator, updateLidoLocatorImplementation } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { deployLidoLocator, updateLidoLocatorImplementation } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
-describe("ValidatorsExitBusOracle.sol:finalizeUpgrade_v3", () => {
+describe("ValidatorsExitBusOracle.sol:finalizeUpgrade_v2", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let originalState: string;
   let locator: LidoLocator;
   let oracle: ValidatorsExitBus__Harness;
@@ -19,6 +22,8 @@ describe("ValidatorsExitBusOracle.sol:finalizeUpgrade_v3", () => {
   const NEW_CONSENSUS_VERSION = 42n;
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
+
     locator = await deployLidoLocator();
     [admin] = await ethers.getSigners();
 
@@ -78,7 +83,11 @@ describe("ValidatorsExitBusOracle.sol:finalizeUpgrade_v3", () => {
       ethers.toUtf8Bytes("lido.ValidatorsExitBus.maxExitRequestLimit"),
     );
 
-    await setStorageAt(await oracle.getAddress(), deprecatedExitRequestLimitSlot, ethers.toBeHex(12, 32));
+    await networkHelpers.setStorageAt(
+      await oracle.getAddress(),
+      deprecatedExitRequestLimitSlot,
+      ethers.toBeHex(12, 32),
+    );
 
     await oracle.finalizeUpgrade_v3(
       maxValidatorsPerReport,
@@ -97,7 +106,9 @@ describe("ValidatorsExitBusOracle.sol:finalizeUpgrade_v3", () => {
     expect(exitRequestLimitData.frameDurationInSec).to.equal(frameDuration);
 
     expect(await oracle.getMaxValidatorsPerReport()).to.equal(maxValidatorsPerReport);
-    expect(await getStorageAt(await oracle.getAddress(), deprecatedExitRequestLimitSlot)).to.equal(ethers.ZeroHash);
+    expect(await networkHelpers.getStorageAt(await oracle.getAddress(), deprecatedExitRequestLimitSlot)).to.equal(
+      ethers.ZeroHash,
+    );
 
     // should not allow finalizeUpgrade_v3 to run again
     await expect(oracle.finalizeUpgrade_v3(10, 100, 1, 48, NEW_CONSENSUS_VERSION + 1n)).to.be.revertedWithCustomError(

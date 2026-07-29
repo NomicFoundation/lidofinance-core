@@ -1,16 +1,18 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import { AbiCoder, keccak256, ZeroAddress } from "ethers";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import { type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import {
+import type {
   HashConsensus__Harness,
   StakingModule__MockForKeyVerification,
   TriggerableWithdrawalsGateway__MockForVEB,
   ValidatorsExitBus__Harness,
-} from "typechain-types";
+} from "typechain-types/index.js";
 
-import { de0x, numberToHex, VEBO_CONSENSUS_VERSION } from "lib";
+import { de0x, numberToHex, VEBO_CONSENSUS_VERSION } from "#lib";
 
 import {
   DATA_FORMAT_LIST_WITH_KEY_INDEX,
@@ -18,7 +20,7 @@ import {
   initVEBO,
   SECONDS_PER_FRAME,
   seedMockModuleSigningKeys,
-} from "test/deploy";
+} from "#test/deploy";
 
 // -----------------------------------------------------------------------------
 // Constants & helpers
@@ -32,7 +34,7 @@ const PUBKEYS = [
   "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
 ];
 
-const ZERO_ADDRESS = ethers.ZeroAddress;
+const ZERO_ADDRESS = ZeroAddress;
 
 const LAST_PROCESSING_REF_SLOT = 1;
 
@@ -58,8 +60,8 @@ interface ReportFields {
 
 const calcValidatorsExitBusReportDataHash = (items: ReportFields) => {
   const reportData = [items.consensusVersion, items.refSlot, items.requestsCount, items.dataFormat, items.data];
-  const reportDataHash = ethers.keccak256(
-    ethers.AbiCoder.defaultAbiCoder().encode(["(uint256,uint256,uint256,uint256,bytes)"], [reportData]),
+  const reportDataHash = keccak256(
+    AbiCoder.defaultAbiCoder().encode(["(uint256,uint256,uint256,uint256,bytes)"], [reportData]),
   );
   return reportDataHash;
 };
@@ -89,12 +91,12 @@ const createValidatorDataList = (requests: ExitRequest[]) => {
 };
 
 const hashExitRequest = (request: { dataFormat: number; data: string }) => {
-  return ethers.keccak256(
-    ethers.AbiCoder.defaultAbiCoder().encode(["bytes", "uint256"], [request.data, request.dataFormat]),
-  );
+  return keccak256(AbiCoder.defaultAbiCoder().encode(["bytes", "uint256"], [request.data, request.dataFormat]));
 };
 
 describe("ValidatorsExitBusOracle.sol:triggerExits", () => {
+  let ethers: HardhatEthers;
+
   let consensus: HashConsensus__Harness;
   let oracle: ValidatorsExitBus__Harness;
   let admin: HardhatEthersSigner;
@@ -144,6 +146,10 @@ describe("ValidatorsExitBusOracle.sol:triggerExits", () => {
     await consensus.connect(member3).submitReport(refSlot, hash, VEBO_CONSENSUS_VERSION);
     expect((await consensus.getConsensusState()).consensusReport).to.equal(hash);
   };
+
+  before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+  });
 
   describe("Submit via oracle flow ", async () => {
     const exitRequests = [

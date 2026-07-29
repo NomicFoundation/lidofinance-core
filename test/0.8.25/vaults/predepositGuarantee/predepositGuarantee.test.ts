@@ -1,18 +1,18 @@
 import { expect } from "chai";
 import { ZeroAddress } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers, HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import {
+import type { IPredepositGuarantee } from "typechain-types/contracts/0.8.25/vaults/interfaces/IPredepositGuarantee.js";
+import type {
   EthRejector,
   LidoLocator,
   OssifiableProxy,
   PredepositGuarantee,
   SSZMerkleTree,
   StakingVault__MockForPDG,
-} from "typechain-types";
-import { IPredepositGuarantee } from "typechain-types/contracts/0.8.25/vaults/interfaces/IPredepositGuarantee";
+} from "typechain-types/index.js";
 
 import {
   addressToWC,
@@ -26,13 +26,15 @@ import {
   prepareLocalMerkleTree,
   randomBytes32,
   setBeaconBlockRoot,
-  Validator,
-} from "lib";
+  type Validator,
+} from "#lib";
 
-import { deployLidoLocator } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { deployLidoLocator } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
 describe("PredepositGuarantee.sol", () => {
+  let ethers: HardhatEthers;
+
   let deployer: HardhatEthersSigner;
   let admin: HardhatEthersSigner;
   let vaultOwner: HardhatEthersSigner;
@@ -54,6 +56,8 @@ describe("PredepositGuarantee.sol", () => {
   let originalState: string;
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     [deployer, admin, vaultOwner, vaultOperator, vaultOperatorGuarantor, pauser, stranger] = await ethers.getSigners();
 
     // local merkle tree with 1st validator
@@ -877,7 +881,7 @@ describe("PredepositGuarantee.sol", () => {
             },
             wc,
           ),
-        ).to.be.reverted;
+        ).to.revert(ethers);
       });
 
       it("should not revert on valid proof", async () => {
@@ -902,7 +906,7 @@ describe("PredepositGuarantee.sol", () => {
           slot: beaconHeader.slot,
         };
 
-        await expect(pdg.validatePubKeyWCProof(witness, wc)).not.to.be.reverted;
+        await expect(pdg.validatePubKeyWCProof(witness, wc)).not.to.revert(ethers);
       });
     });
 
@@ -920,7 +924,7 @@ describe("PredepositGuarantee.sol", () => {
           },
         };
 
-        await expect(pdg.verifyDepositMessage(deposit, invalidDepositY, wc)).to.be.reverted;
+        await expect(pdg.verifyDepositMessage(deposit, invalidDepositY, wc)).to.revert(ethers);
       });
 
       it("should not revert on valid signature", async () => {
@@ -928,7 +932,7 @@ describe("PredepositGuarantee.sol", () => {
         const validator = generateValidator(wc);
         const { deposit, depositY } = await generatePredeposit(validator);
 
-        await expect(pdg.verifyDepositMessage(deposit, depositY, wc)).not.to.be.reverted;
+        await expect(pdg.verifyDepositMessage(deposit, depositY, wc)).not.to.revert(ethers);
       });
     });
 

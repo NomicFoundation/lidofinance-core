@@ -1,17 +1,17 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import { type HardhatEthers, type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
 import {
-  OracleReportSanityChecker,
-  StakingRouter__MockForValidatorsExitBus,
-  ValidatorsExitBus__Harness,
-} from "typechain-types";
+  type OracleReportSanityChecker,
+  type StakingRouter__MockForValidatorsExitBus,
+  type ValidatorsExitBus__Harness,
+} from "typechain-types/index.js";
 
-import { de0x, numberToHex } from "lib";
+import { de0x, numberToHex } from "#lib";
 
-import { DATA_FORMAT_LIST, DATA_FORMAT_LIST_WITH_KEY_INDEX, deployVEBO } from "test/deploy";
+import { DATA_FORMAT_LIST, DATA_FORMAT_LIST_WITH_KEY_INDEX, deployVEBO } from "#test/deploy";
 
 const PUBKEYS = [
   "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -32,6 +32,8 @@ const LEGACY_MODULE_MAX_BALANCE_ETH = 32n; // 32 ETH
 const MAXEB_MODULE_MAX_BALANCE_ETH = 2048n; // 2048 ETH
 
 describe("ValidatorsExitBusOracle.sol:balanceCalculation", () => {
+  let ethers: HardhatEthers;
+
   let oracle: ValidatorsExitBus__Harness;
   let admin: HardhatEthersSigner;
   let sanityChecker: OracleReportSanityChecker;
@@ -69,6 +71,8 @@ describe("ValidatorsExitBusOracle.sol:balanceCalculation", () => {
   };
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     const signers = await ethers.getSigners();
     admin = signers[0];
 

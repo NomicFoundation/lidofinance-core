@@ -1,25 +1,26 @@
 import { expect } from "chai";
 import { ContractTransactionReceipt } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { setBalance } from "@nomicfoundation/hardhat-network-helpers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import type { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import { NodeOperatorsRegistry } from "typechain-types";
+import type { NodeOperatorsRegistry } from "typechain-types/index.js";
 
 import {
   advanceChainTime,
   ether,
   EXTRA_DATA_TYPE_EXITED_VALIDATORS,
-  ItemType,
-  LoadedContract,
+  type ItemType,
+  type LoadedContract,
   log,
   prepareExtraData,
   RewardDistributionState,
   setAnnualBalanceIncreaseLimit,
-} from "lib";
-import { getProtocolContext, ProtocolContext, seedProtocolPendingBaseline, withCSM } from "lib/protocol";
-import { reportWithoutExtraData } from "lib/protocol/helpers/accounting";
+} from "#lib";
+import { getProtocolContext, type ProtocolContext, seedProtocolPendingBaseline, withCSM } from "#lib/protocol";
+import { reportWithoutExtraData } from "lib/protocol/helpers/accounting.js";
 import {
   getOperatorName,
   getOperatorRewardAddress,
@@ -27,12 +28,16 @@ import {
   norSdvtAddOperatorKeys,
   norSdvtEnsureOperators,
   norSdvtSetOperatorStakingLimit,
-} from "lib/protocol/helpers/nor-sdvt";
-import { depositAndReportValidators, removeStakingLimit, setModuleStakeShareLimit } from "lib/protocol/helpers/staking";
-import { CSM_MODULE_ID, NOR_MODULE_ID, SDVT_MODULE_ID } from "lib/protocol/helpers/staking-module";
-import { LoadedContract as ProtocolLoadedContract, StakingModuleName } from "lib/protocol/types";
+} from "lib/protocol/helpers/nor-sdvt.js";
+import {
+  depositAndReportValidators,
+  removeStakingLimit,
+  setModuleStakeShareLimit,
+} from "lib/protocol/helpers/staking.js";
+import { CSM_MODULE_ID, NOR_MODULE_ID, SDVT_MODULE_ID } from "lib/protocol/helpers/staking-module.js";
+import type { LoadedContract as ProtocolLoadedContract, StakingModuleName } from "lib/protocol/types.js";
 
-import { MAX_BASIS_POINTS, Snapshot } from "test/suite";
+import { MAX_BASIS_POINTS, Snapshot } from "#test/suite";
 
 const MIN_KEYS_PER_OPERATOR = 5n;
 const MIN_OPERATORS_COUNT = 30n;
@@ -65,6 +70,9 @@ class ListKeyMapHelper<ValueType> {
 }
 
 describe("Integration: AccountingOracle extra data full items", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let ctx: ProtocolContext;
   let stranger: HardhatEthersSigner;
 
@@ -74,11 +82,13 @@ describe("Integration: AccountingOracle extra data full items", () => {
   let maxItemsPerExtraDataTransaction: number;
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
+
     ctx = await getProtocolContext();
     snapshot = await Snapshot.take();
 
     [stranger] = await ethers.getSigners();
-    await setBalance(stranger.address, ether("1000000"));
+    await networkHelpers.setBalance(stranger.address, ether("1000000"));
 
     const { oracleReportSanityChecker } = ctx.contracts;
     // Need this to pass the annual balance increase limit check in sanity checker for scratch deploy

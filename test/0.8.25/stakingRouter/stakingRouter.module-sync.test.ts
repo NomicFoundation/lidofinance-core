@@ -1,18 +1,18 @@
 import { bigintToHex, bufToHex } from "bigint-conversion";
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthers, HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
+import { type ValidatorsCountsCorrectionStruct } from "typechain-types/contracts/0.8.25/sr/StakingRouter.js";
 import {
-  AccountingOracle__MockForStakingRouter,
-  DepositContract__MockForBeaconChainDepositor,
-  Lido__MockForStakingRouter,
-  LidoLocator,
-  StakingModule__MockForStakingRouter,
-  StakingRouter__Harness,
-} from "typechain-types";
-import { ValidatorsCountsCorrectionStruct } from "typechain-types/contracts/0.8.25/sr/StakingRouter";
+  type AccountingOracle__MockForStakingRouter,
+  type DepositContract__MockForBeaconChainDepositor,
+  type Lido__MockForStakingRouter,
+  type LidoLocator,
+  type StakingModule__MockForStakingRouter,
+  type StakingRouter__Harness,
+} from "typechain-types/index.js";
 
 import {
   ether,
@@ -24,12 +24,14 @@ import {
   StakingModuleStatus,
   wcTypeMaxEB,
   WithdrawalCredentialsType,
-} from "lib";
+} from "#lib";
 
-import { deployLidoLocator, deployStakingRouter } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { deployLidoLocator, deployStakingRouter } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
 describe("StakingRouter.sol:module-sync", () => {
+  let ethers: HardhatEthers;
+
   let deployer: HardhatEthersSigner;
   let admin: HardhatEthersSigner;
   let user: HardhatEthersSigner;
@@ -64,6 +66,8 @@ describe("StakingRouter.sol:module-sync", () => {
   let originalState: string;
 
   before(async () => {
+    ({ ethers } = await hre.network.getOrCreate());
+
     [deployer, admin, user] = await ethers.getSigners();
 
     // Deploy Lido mock

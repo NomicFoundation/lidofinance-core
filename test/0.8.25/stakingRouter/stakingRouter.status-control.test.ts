@@ -1,16 +1,16 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import { type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import { LidoLocator, StakingRouter__Harness } from "typechain-types";
+import { type LidoLocator, type StakingRouter__Harness } from "typechain-types/index.js";
 
-import { certainAddress, MAX_TOP_UP_PER_BLOCK_GWEI, randomWCType1, WithdrawalCredentialsType } from "lib";
+import { certainAddress, MAX_TOP_UP_PER_BLOCK_GWEI, randomWCType1, WithdrawalCredentialsType } from "#lib";
 
-import { deployLidoLocator } from "test/deploy";
-import { Snapshot } from "test/suite";
+import { deployLidoLocator } from "#test/deploy";
+import { Snapshot } from "#test/suite";
 
-import { deployStakingRouter } from "../../deploy/stakingRouter";
+import { deployStakingRouter } from "../../deploy/stakingRouter.js";
 
 enum Status {
   Active,
@@ -35,6 +35,8 @@ context("StakingRouter.sol:status-control", () => {
   const depositSecurityModule = certainAddress("test:staking-router:depositSecurityModule");
 
   before(async () => {
+    const { ethers } = await hre.network.getOrCreate();
+
     [deployer, admin, user] = await ethers.getSigners();
 
     locator = await deployLidoLocator({

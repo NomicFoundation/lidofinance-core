@@ -1,12 +1,13 @@
 import { expect } from "chai";
 import { ContractTransactionReceipt, hexlify } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
 import { SecretKey } from "@chainsafe/blst";
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { setBalance } from "@nomicfoundation/hardhat-network-helpers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import type { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import { Dashboard, SSZBLSHelpers, StakingVault } from "typechain-types";
+import type { Dashboard, SSZBLSHelpers, StakingVault } from "typechain-types/index.js";
 
 import {
   days,
@@ -17,22 +18,22 @@ import {
   log,
   prepareLocalMerkleTree,
   updateBalance,
-} from "lib";
-import { TOTAL_BASIS_POINTS } from "lib/constants";
+} from "#lib";
 import {
   calculateLockedValue,
   ensurePredepositGuaranteeUnpaused,
   getProtocolContext,
   getReportTimeElapsed,
-  OracleReportParams,
-  ProtocolContext,
+  type OracleReportParams,
+  type ProtocolContext,
   reportVaultDataWithProof,
   reportWithoutClActivation,
   setupLidoForVaults,
-} from "lib/protocol";
+} from "#lib/protocol";
+import { TOTAL_BASIS_POINTS } from "lib/constants.js";
 
-import { bailOnFailure, Snapshot } from "test/suite";
-import { ONE_DAY } from "test/suite/constants";
+import { bailOnFailure, Snapshot } from "#test/suite";
+import { ONE_DAY } from "test/suite/constants.js";
 
 const VALIDATORS_PER_VAULT = 2n;
 const VALIDATOR_DEPOSIT_SIZE = ether("33");
@@ -51,6 +52,9 @@ const VAULT_NODE_OPERATOR_FEE = 3_00n; // 3% node operator performance fee
 const CONFIRM_EXPIRY = days(7n);
 
 describe("Scenario: Staking Vaults Happy Path", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let ctx: ProtocolContext;
   let snapshot: string;
 
@@ -69,6 +73,8 @@ describe("Scenario: Staking Vaults Happy Path", () => {
   let stakingVaultMaxMintingShares = 0n;
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
+
     ctx = await getProtocolContext();
     snapshot = await Snapshot.take();
 
@@ -81,7 +87,7 @@ describe("Scenario: Staking Vaults Happy Path", () => {
     await setupLidoForVaults(ctx);
 
     // add ETH to NO for PDG deposit + gas
-    await setBalance(nodeOperator.address, ether((VALIDATORS_PER_VAULT + 1n).toString()));
+    await networkHelpers.setBalance(nodeOperator.address, ether((VALIDATORS_PER_VAULT + 1n).toString()));
   });
 
   after(async () => await Snapshot.restore(snapshot));
@@ -449,7 +455,7 @@ describe("Scenario: Staking Vaults Happy Path", () => {
   it("Should allow to withdraw the deposit from the vault", async () => {
     const withdrawTx = await stakingVault.connect(owner).withdraw(owner, VAULT_CONNECTION_DEPOSIT);
     await expect(withdrawTx).to.emit(stakingVault, "EtherWithdrawn").withArgs(owner, VAULT_CONNECTION_DEPOSIT);
-    await expect(withdrawTx).changeEtherBalance(owner, VAULT_CONNECTION_DEPOSIT);
+    await expect(withdrawTx).changeEtherBalance(ethers, owner, VAULT_CONNECTION_DEPOSIT);
   });
 
   async function isSoleRoleMember(account: HardhatEthersSigner, role: string) {

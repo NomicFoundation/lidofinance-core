@@ -1,11 +1,11 @@
-import { BaseContract, ContractRunner } from "ethers";
-import { artifacts, ethers } from "hardhat";
+import { type BaseContract, type ContractRunner, Interface } from "ethers";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
+import type { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
 
-import { NonPayableOverrides } from "typechain-types/common";
+import { type NonPayableOverrides } from "typechain-types/common.js";
 
-import { getDeployerSigner } from "./account";
+import { getDeployerSigner } from "./account.js";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type MethodArgs<C, M extends keyof C> = C[M] extends (...args: any[]) => any ? Parameters<C[M]> : never;
@@ -57,7 +57,7 @@ export interface ContractFactoryHelper<ContractType> {
 }
 
 export async function addContractHelperFields(contract: BaseContract, name: string): Promise<LoadedContract> {
-  const artifact = await artifacts.readArtifact(name);
+  const artifact = await hre.artifacts.readArtifact(name);
   (contract as unknown as LoadedContract).name = name;
   (contract as unknown as LoadedContract).contractPath = artifact.sourceName;
   (contract as unknown as LoadedContract).address = await contract.getAddress();
@@ -69,6 +69,7 @@ export async function loadContract<ContractType extends BaseContract>(
   address: string,
   signer?: HardhatEthersSigner,
 ) {
+  const { ethers } = await hre.network.getOrCreate();
   if (!signer) {
     signer = await getDeployerSigner();
   }
@@ -77,7 +78,7 @@ export async function loadContract<ContractType extends BaseContract>(
 }
 
 export async function getContractPath(contractName: string) {
-  const artifact = await artifacts.readArtifact(contractName);
+  const artifact = await hre.artifacts.readArtifact(contractName);
   return artifact.sourceName;
 }
 
@@ -86,12 +87,13 @@ export async function encodeFunctionCall<T extends readonly unknown[] = readonly
   method: string,
   args: T,
 ) {
-  const artifact = await artifacts.readArtifact(contractName);
-  const contractInterface = new ethers.Interface(artifact.abi);
+  const artifact = await hre.artifacts.readArtifact(contractName);
+  const contractInterface = new Interface(artifact.abi);
   return contractInterface.encodeFunctionData(method, args);
 }
 
 export async function isContractDeployed(address: string): Promise<boolean> {
+  const { ethers } = await hre.network.getOrCreate();
   const code = await ethers.provider.getCode(address);
   return code !== "0x";
 }

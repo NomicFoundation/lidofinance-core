@@ -1,21 +1,25 @@
 import { expect } from "chai";
 import { randomBytes } from "crypto";
 import { AbiCoder, hexlify } from "ethers";
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
-import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
-import { getStorageAt, setCode } from "@nomicfoundation/hardhat-network-helpers";
+import type { HardhatEthers } from "@nomicfoundation/hardhat-ethers/types";
+import { type HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { NetworkHelpers } from "@nomicfoundation/hardhat-network-helpers/types";
 
-import { Address__Harness, Recipient__MockForAddress } from "typechain-types";
+import type { Address__Harness, Recipient__MockForAddress } from "typechain-types/index.js";
 
-import { batch, certainAddress } from "lib";
+import { batch, certainAddress } from "#lib";
 
-import { Snapshot } from "test/suite";
+import { Snapshot } from "#test/suite";
 
 // this contract code reverts any call to it
 const INVALID_BYTECODE = "0xFE";
 
 describe("WithdrawalsManagerProxy.sol:address", () => {
+  let ethers: HardhatEthers;
+  let networkHelpers: NetworkHelpers;
+
   let deployer: HardhatEthersSigner;
   let user: HardhatEthersSigner;
 
@@ -24,6 +28,8 @@ describe("WithdrawalsManagerProxy.sol:address", () => {
   let originalState: string;
 
   before(async () => {
+    ({ ethers, networkHelpers } = await hre.network.getOrCreate());
+
     [deployer, user] = await ethers.getSigners();
 
     address = await ethers.deployContract("Address__Harness", deployer);
@@ -37,7 +43,7 @@ describe("WithdrawalsManagerProxy.sol:address", () => {
   context("isContract", () => {
     it("Returns true if the account is a contract", async () => {
       const someContract = certainAddress("test:address-lib:random-contract");
-      await setCode(someContract, "0xabcd");
+      await networkHelpers.setCode(someContract, "0xabcd");
 
       expect(await address.isContract(someContract)).to.be.true;
     });
@@ -56,7 +62,7 @@ describe("WithdrawalsManagerProxy.sol:address", () => {
 
     it("Reverts if the recipient rejects", async () => {
       const rejectingRecipient = certainAddress("test:address-lib:rejecting-contract");
-      await setCode(rejectingRecipient, INVALID_BYTECODE);
+      await networkHelpers.setCode(rejectingRecipient, INVALID_BYTECODE);
 
       await expect(address.sendValue(rejectingRecipient, 1n, { value: 1n })).to.be.revertedWith(
         "Address: unable to send value, recipient may have reverted",
@@ -214,7 +220,7 @@ describe("WithdrawalsManagerProxy.sol:address", () => {
           recipient.interface.encodeFunctionData("writeToStorage", [slot, value]),
         );
 
-        expect(await getStorageAt(await address.getAddress(), slot)).to.equal(value);
+        expect(await networkHelpers.getStorageAt(await address.getAddress(), slot)).to.equal(value);
       });
 
       it("Reverts if the target is not a contract", async () => {
@@ -241,7 +247,7 @@ describe("WithdrawalsManagerProxy.sol:address", () => {
           "my error message",
         );
 
-        expect(await getStorageAt(await address.getAddress(), slot)).to.equal(value);
+        expect(await networkHelpers.getStorageAt(await address.getAddress(), slot)).to.equal(value);
       });
 
       it("Reverts with custom error message", async () => {
